@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\proyFinal\\proyFinal.csproj": {}
+    "D:\\aspnet\\ProyProgra1\\proyFinal.csproj": {}
   },
   "projects": {
-    "D:\\proyFinal\\proyFinal.csproj": {
+    "D:\\aspnet\\ProyProgra1\\proyFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\proyFinal\\proyFinal.csproj",
+        "projectUniqueName": "D:\\aspnet\\ProyProgra1\\proyFinal.csproj",
         "projectName": "proyFinal",
-        "projectPath": "D:\\proyFinal\\proyFinal.csproj",
+        "projectPath": "D:\\aspnet\\ProyProgra1\\proyFinal.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "D:\\proyFinal\\obj\\",
+        "outputPath": "D:\\aspnet\\ProyProgra1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JVbEQpaU7bVKJXhYbtP+gThRVxBkzMv/qHCVS+1PExZnoAQxNTnM+AypFxJTcHZzqHpe9dqP2ECKoEMuHQa27w==",
+  "dgSpecHash": "ulvUviIv0WWPflaKS8oYMk+p7apPoTLOB3Zb8cOMekCxP1TH3s0MIDUFvLFo2UAEdrfgbWEAUpSfACBFBaQHFw==",
   "success": true,
-  "projectFilePath": "D:\\proyFinal\\proyFinal.csproj",
+  "projectFilePath": "D:\\aspnet\\ProyProgra1\\proyFinal.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
