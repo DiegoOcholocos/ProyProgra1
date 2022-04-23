@@ -1,4 +1,4 @@
-namespace proyFinal.Models;
+namespace appproy.Models;
 
 public class ErrorViewModel
 {
