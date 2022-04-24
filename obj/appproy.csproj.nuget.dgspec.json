@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\aspnet\\appproy\\appproy.csproj": {}
+    "d:\\aspnet\\appproy\\appproy.csproj": {}
   },
   "projects": {
-    "D:\\aspnet\\appproy\\appproy.csproj": {
+    "d:\\aspnet\\appproy\\appproy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\aspnet\\appproy\\appproy.csproj",
+        "projectUniqueName": "d:\\aspnet\\appproy\\appproy.csproj",
         "projectName": "appproy",
-        "projectPath": "D:\\aspnet\\appproy\\appproy.csproj",
+        "projectPath": "d:\\aspnet\\appproy\\appproy.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "D:\\aspnet\\appproy\\obj\\",
+        "outputPath": "d:\\aspnet\\appproy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -50,11 +50,23 @@
               "target": "Package",
               "version": "[6.0.4, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.4, )"
             }
