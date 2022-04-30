@@ -8,69 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = appproy
 build_property.RootNamespace = appproy
-build_property.ProjectDir = D:\aspnet\proy3004202\ProyProgra1\
+build_property.ProjectDir = d:\aspnet\proy3004202\ProyProgra1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\aspnet\proy3004202\ProyProgra1
+build_property.MSBuildProjectDirectory = d:\aspnet\proy3004202\ProyProgra1
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/Account/Register.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ViewImports.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ViewStart.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Home/Contacto.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Home/Contacto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Home/Cursos.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Home/Cursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJzb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Home/Index.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Home/Privacy.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Shared/Error.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Shared/_LoginPartial.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/_ViewImports.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/_ViewStart.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/aspnet/proy3004202/ProyProgra1/Views/Shared/_Layout.cshtml]
+[d:/aspnet/proy3004202/ProyProgra1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mtmb5t5kqt
