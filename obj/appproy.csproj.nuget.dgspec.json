@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "c:\\Users\\neile\\ProyProgra1\\appproy.csproj": {}
   },
   "projects": {
@@ -12,9 +13,22 @@
         "projectPath": "c:\\Users\\neile\\ProyProgra1\\appproy.csproj",
         "packagesPath": "C:\\Users\\neile\\.nuget\\packages\\",
         "outputPath": "c:\\Users\\neile\\ProyProgra1\\obj\\",
+=======
+    "d:\\aspnet\\proyv3\\ProyProgra1\\appproy.csproj": {}
+  },
+  "projects": {
+    "d:\\aspnet\\proyv3\\ProyProgra1\\appproy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\aspnet\\proyv3\\ProyProgra1\\appproy.csproj",
+        "projectName": "appproy",
+        "projectPath": "d:\\aspnet\\proyv3\\ProyProgra1\\appproy.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "d:\\aspnet\\proyv3\\ProyProgra1\\obj\\",
+>>>>>>> d1f2bbd685f5e235f32bd4e6399cc0b01befe39f
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\neile\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -89,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
