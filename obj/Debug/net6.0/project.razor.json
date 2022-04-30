@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\neile\\ProyProgra1\\appproy.csproj",
+  "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\appproy.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16298,57 +16298,77 @@
   "RootNamespace": "appproy",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Cursos.cshtml",
-      "TargetPath": "Views\\Home\\Cursos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Index.cshtml",
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Home\\Cursos.cshtml",
+      "TargetPath": "Views\\Home\\Cursos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Contacto.cshtml",
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Home\\Contacto.cshtml",
       "TargetPath": "Views\\Home\\Contacto.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Shared\\_LoginPartial.cshtml",
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     }
