@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\neile\\ProyProgra1\\appproy.csproj": {}
+    "C:\\Users\\neile\\ProyProgra1\\appproy.csproj": {}
   },
   "projects": {
-    "c:\\Users\\neile\\ProyProgra1\\appproy.csproj": {
+    "C:\\Users\\neile\\ProyProgra1\\appproy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\neile\\ProyProgra1\\appproy.csproj",
+        "projectUniqueName": "C:\\Users\\neile\\ProyProgra1\\appproy.csproj",
         "projectName": "appproy",
-        "projectPath": "c:\\Users\\neile\\ProyProgra1\\appproy.csproj",
+        "projectPath": "C:\\Users\\neile\\ProyProgra1\\appproy.csproj",
         "packagesPath": "C:\\Users\\neile\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\neile\\ProyProgra1\\obj\\",
+        "outputPath": "C:\\Users\\neile\\ProyProgra1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\neile\\AppData\\Roaming\\NuGet\\NuGet.Config"
