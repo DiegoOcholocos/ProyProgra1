@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EojPxqjdPZPlGc6xzxKwB73QElG55Fsjw7E9K8y3lIfXlhS1zBg1b8lPOurV+VBMbv4F0CNJ+0z6FrrmZdeazg==",
+  "dgSpecHash": "n12ao/+bHeUN3lzZY9by/Hqxey4Aht4db6bOEatgKmRKLQYfmy5DCIYtZ/kcey4V+jlA+XhFq7Izdu35zK/hVA==",
   "success": true,
-  "projectFilePath": "d:\\aspnet\\proy3004202\\ProyProgra1\\appproy.csproj",
+  "projectFilePath": "d:\\aspnet\\proyv3\\ProyProgra1\\appproy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
@@ -196,12 +196,5 @@
     "C:\\Users\\diego\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file d:\\aspnet\\proy3004202\\ProyProgra1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
