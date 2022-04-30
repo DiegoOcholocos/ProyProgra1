@@ -16323,6 +16323,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Nosotros.cshtml",
+      "TargetPath": "Views\\Home\\Nosotros.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16350,6 +16355,11 @@
     {
       "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\neile\\ProyProgra1\\Views\\Home\\Curriculas.cshtml",
+      "TargetPath": "Views\\Home\\Curriculas.cshtml",
       "FileKind": "mvc"
     }
   ],

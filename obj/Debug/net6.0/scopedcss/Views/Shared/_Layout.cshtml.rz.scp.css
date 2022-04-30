@@ -46,3 +46,10 @@ button.accept-policy[b-mtmb5t5kqt] {
   white-space: nowrap;
   line-height: 60px;
 }
+.horario[b-mtmb5t5kqt]{
+  text-align: center;
+}
+.Contacto[b-mtmb5t5kqt]{
+  text-align: center;
+  background-color: #fff;
+}
