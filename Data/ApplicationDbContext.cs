@@ -10,5 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<appproy.Models.Persona> DataPersonas { get; set; }
+    public DbSet<appproy.Models.Contacto> DataContactos { get; set; }
 }

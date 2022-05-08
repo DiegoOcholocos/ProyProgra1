@@ -22,7 +22,7 @@ namespace appproy.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("appproy.Models.Persona", b =>
+            modelBuilder.Entity("appproy.Models.Contacto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,13 +31,29 @@ namespace appproy.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("comment")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("comment");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("email");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<string>("subject")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("subject");
 
                     b.HasKey("Id");
 
-                    b.ToTable("t_persona");
+                    b.ToTable("t_Contacto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
