@@ -6,7 +6,7 @@ using appproy.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace appproy.Controllers;
-{
+
         public class ContactoController: Controller
     {
             private readonly ILogger<ContactoController> _logger;
@@ -26,4 +26,4 @@ namespace appproy.Controllers;
         return View("index");
     }
     }
-}
+
