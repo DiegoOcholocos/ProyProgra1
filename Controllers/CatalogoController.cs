@@ -20,13 +20,18 @@ namespace appproy.Controllers
             _context = context;
             _logger = logger;
         }
-        public async Task<IActionResult>Index()
+        
+        public async Task<IActionResult> Index(string? searchString)
         {
-            var catalogo = from o in _context.DataProductos select o;
-            return View(await catalogo.ToListAsync());
+            
+            var productos = from o in _context.DataProductos select o;
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Name.Contains(searchString));
+            }
+            return View(await productos.ToListAsync());
         }
 
-        public async Task<IActionResult> Details(int? id){
+       public async Task<IActionResult> Details(int? id){
             Producto objProduct = await _context.DataProductos.FindAsync(id);
             if(objProduct == null){
                 return NotFound();
