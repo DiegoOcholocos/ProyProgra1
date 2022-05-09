@@ -9,21 +9,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace appproy.Controllers
 {
-    public class ProductoController:  Controller
+    public class CatalogoController:  Controller
     {
-        private readonly ILogger<ProductoController> _logger;
+        private readonly ILogger<CatalogoController> _logger;
         private readonly ApplicationDbContext _context;
 
-        public ProductoController(ApplicationDbContext context,
-            ILogger<ProductoController> logger)
+        public CatalogoController(ApplicationDbContext context,
+            ILogger<CatalogoController> logger)
         {
             _context = context;
             _logger = logger;
         }
         public async Task<IActionResult>Index()
         {
-            var productos = from o in _context.DataProductos select o;
-            return View(await productos.ToListAsync());
+            var catalogo = from o in _context.DataProductos select o;
+            return View(await catalogo.ToListAsync());
         }
     }
 }
