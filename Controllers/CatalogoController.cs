@@ -25,5 +25,13 @@ namespace appproy.Controllers
             var catalogo = from o in _context.DataProductos select o;
             return View(await catalogo.ToListAsync());
         }
+
+        public async Task<IActionResult> Details(int? id){
+            Producto objProduct = await _context.DataProductos.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
+        }
     }
 }
