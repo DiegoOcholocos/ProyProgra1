@@ -11,4 +11,7 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<appproy.Models.Contacto> DataContactos { get; set; }
+
+    public DbSet<appproy.Models.Producto> DataProductos { get; set; }
+
 }
