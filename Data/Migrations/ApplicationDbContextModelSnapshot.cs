@@ -65,6 +65,11 @@ namespace appproy.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Clase")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("Clase");
+
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("text")
