@@ -79,22 +79,6 @@ namespace appiden2.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
-            [Display(Name = "Name")]
-            public string Name { get; set; }
-
-            [Required]
-            [Display(Name = "LastName")]
-            public string LastName { get; set; }
-
-            [Required]
-            [Display(Name = "DNI")]
-            public string DNI { get; set; }
-
-            [Required]
-            [Display(Name = "Direction")]
-            public string Direction { get; set; }
-
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
