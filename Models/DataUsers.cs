@@ -13,6 +13,9 @@ namespace appproy.Models
         [Column("id")]
 
         public int Id { get; set; }
+        
+        [Column("idUser")]
+        public int IdUser { get; set; }
         [Column("Correo")]
         public string? Correo { get; set; }
         [Column("Name")]
