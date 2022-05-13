@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using appproy.Models;
 using appproy.Data;
-namespace appcomics.Controllers
+namespace appproy.Controllers
 {
     public class ContactoController: Controller
     {
