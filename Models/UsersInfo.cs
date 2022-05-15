@@ -19,6 +19,8 @@ namespace appproy.Models
         public string UserName { get; set; }
         [Column("DNI")]
         public string? DNI { get; set; }
+        [Column("Mail")]
+        public string? Mail { get; set; }
         [Column("Name")]
         public string? Name { get; set; }
         [Column("LastName")]

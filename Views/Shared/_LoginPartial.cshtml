@@ -3,6 +3,12 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+<form asp-controller="Catalogo" asp-action="Index">
+  <p>
+    Nombre: <input type="text" name="searchString">
+    <input type="submit" value="Filter" />
+  </p>
+</form>
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
@@ -13,6 +19,7 @@
             <button  type="submit" class="nav-link btn btn-link text-dark"><b>Salir</b></button>
         </form>
     </li>
+    
 }
 else
 {
