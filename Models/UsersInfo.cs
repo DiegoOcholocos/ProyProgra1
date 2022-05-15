@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace appproy.Models
 {
-    [Table("t_DataUsers")]
-    public class DataUsers
+    [Table("t_UsersInfo")]
+    public class UsersInfo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
 
         public int Id { get; set; }
         
-        [Column("NormalizedEmail")]
-        public string NormalizedEmail { get; set; }
+        [Column("UserName")]
+        public string UserName { get; set; }
         [Column("DNI")]
-        public int? DNI { get; set; }
+        public string? DNI { get; set; }
         [Column("Name")]
         public string? Name { get; set; }
         [Column("LastName")]
@@ -27,5 +27,7 @@ namespace appproy.Models
         public string? Telefono { get; set; }
         [Column("Direction")]
         public string? Direction { get; set; }
+        [Column("Photo")]
+        public string? Photo { get; set; }
     }
 }
