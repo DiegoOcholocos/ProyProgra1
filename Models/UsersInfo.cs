@@ -15,8 +15,8 @@ namespace appproy.Models
 
         public int Id { get; set; }
         
-        [Column("UserName")]
-        public string UserName { get; set; }
+        [Column("UserID")]
+        public string UserID { get; set; }
         [Column("DNI")]
         public string? DNI { get; set; }
         [Column("Mail")]
