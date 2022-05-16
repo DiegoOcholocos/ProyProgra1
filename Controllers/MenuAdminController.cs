@@ -18,5 +18,13 @@ namespace appproy.Controllers
     {
         return View();
     }
+    public IActionResult Menureclamos()
+    {
+        return View();
+    }
+    public IActionResult Menupagos()
+    {
+        return View();
+    }
     }
 }

@@ -1,15 +1,15 @@
 @{
-    ViewData["Title"] = "Contacto";
+    ViewData["Title"] = "Menu Administrado";
 }
 <h1>@ViewData["Title"]</h1>
 
 <div class="text-center">
     <h1 class="display-4">Menu Administrador</h1>
     <br>
+    <a class="btn btn-primary btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menupagos">Menu de gestion de Pagos</a>
     <br>
     <br>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Menu de gestion de Pagos</button>
     <br>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Lista de reclamos</button>
+    <a class="btn btn-primary btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menureclamos">Lista de reclamos</a>
     <br>
 </div>
