@@ -16,4 +16,6 @@ public class ApplicationDbContext : IdentityDbContext
 
     public DbSet<appproy.Models.UsersInfo> DataUsersInfo { get; set; }
 
+    public DbSet<appproy.Models.Proforma> DataProforma { get; set; }
+
 }
