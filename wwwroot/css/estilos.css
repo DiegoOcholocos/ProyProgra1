@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.propuesta{
+  font-size: 45px;  
+  font-weight: bold;
+  text-align: center;
+}
+.destacados{
+    font-size: 45px;  
+  font-weight: bold;
+  text-align: center;
+}
+.texto{
+    text-align: center;
+    font-weight: bold;
+}
+.post-list{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.imagen{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.creciendo{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
