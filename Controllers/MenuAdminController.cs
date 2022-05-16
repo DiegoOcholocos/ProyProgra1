@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+namespace appproy.Controllers
+{
+    public class MenuAdminController : Controller
+    {
+        private readonly ILogger<MenuAdminController> _logger;
+
+    public MenuAdminController(ILogger<MenuAdminController> logger)
+    {
+        _logger = logger;
+    }
+    public IActionResult Index()
+    {
+        return View();
+    }
+    }
+}
