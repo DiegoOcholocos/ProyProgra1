@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace appproy.Models
 {
-    [Table("t_UsersInfo")]
+    [Table("t_usersinfo")]
     public class UsersInfo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,14 +17,21 @@ namespace appproy.Models
         
         [Column("UserID")]
         public string UserID { get; set; }
-        [Column("DNI")]
-        public string? DNI { get; set; }
-        [Column("Mail")]
-        public string? Mail { get; set; }
         [Column("Name")]
         public string? Name { get; set; }
         [Column("LastName")]
         public string? LastName { get; set; }
+        [Column("DNI")]
+        public string? DNI { get; set; }
+        [Column("Pasaporte")]
+        public string? Pasaporte { get; set; }
+        [Column("Carnet_de_extranjeria")]
+        public string? Carnet_de_extranjeria { get; set; }
+        [Column("Nacionalidad")]
+        public string? Nacionalidad { get; set; }
+        [Column("Mail")]
+        public string? Mail { get; set; }
+        
         [Column("Telefono")]
         public string? Telefono { get; set; }
         [Column("Direction")]
