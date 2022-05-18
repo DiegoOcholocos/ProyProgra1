@@ -58,13 +58,22 @@ namespace appproy.Models
         public string? Estetica_info { get; set; }
         [Column("Horario")]
         public string? Horario { get; set; }
-        [Column("Foto_DNI")]
-        public string? Foto_DNI { get; set; }
+        [Column("Foto_DNI_Cara")]
+        public string? Foto_DNI_Cara { get; set; }
+        [Column("Foto_DNI_Sello")]
+        public string? Foto_DNI_Sello { get; set; }
         [Column("Codigo_Voucher")]
         public string? Codigo_Voucher { get; set; }
         [Column("Foto_Voucher")]
         public string? Foto_Voucher { get; set; }
+        [Column("Status")]
+        public string? Status { get; set; } ="PENDIENTE";
         [Column("Apuntes")]
         public string? Apuntes { get; set; }
+
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? Creacion { set; get; } = DateTime.Now;
     }
 }

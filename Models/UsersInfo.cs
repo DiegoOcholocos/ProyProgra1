@@ -38,8 +38,6 @@ namespace appproy.Models
         public string? Operador { get; set; }
         [Column("Sexo")]
         public string? Sexo { get; set; }
-        [Column("Grado_Academico")]
-        public string? Grado_Academico { get; set; }
         [Column("Correo-GMAIL")]
         public string? Correo { get; set; }
         [Column("Direccion")]
