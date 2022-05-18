@@ -1,0 +1,44 @@
+@model dynamic;
+@using System.Collections.Generic;
+
+@{
+    ViewData["Title"] = "Datos";
+    IEnumerable<appproy.Models.UsersInfo> listItemsDatos = new List<UsersInfo>();
+    listItemsDatos = @Model.elementosDatos;
+}
+<h1>@ViewData["Title"]</h1>
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().Nacionalidad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (UsersInfo item in Model.elementosDatos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidad)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

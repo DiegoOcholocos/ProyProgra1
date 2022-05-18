@@ -18,4 +18,6 @@ public class ApplicationDbContext : IdentityDbContext
 
     public DbSet<appproy.Models.Proforma> DataProforma { get; set; }
 
+    public DbSet<appproy.Models.UsersMatricula> DataUsersMatricula { get; set; }
+
 }

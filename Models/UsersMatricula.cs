@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace appproy.Models
 {
-    [Table("t_usersinfo")]
-    public class UsersInfo
+    [Table("t_usersmatricula")]
+    public class UsersMatricula
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
@@ -21,6 +21,8 @@ namespace appproy.Models
         public string? Name { get; set; }
         [Column("LastName")]
         public string? LastName { get; set; }
+        [Column("DNI")]
+        public string? DNI { get; set; }
         [Column("Pasaporte")]
         public string? Pasaporte { get; set; }
         [Column("Carnet_de_extranjeria")]
@@ -46,5 +48,23 @@ namespace appproy.Models
         public string? Direccion { get; set; }
         [Column("Distrito")]
         public string? Distrito { get; set; }
+        [Column("Vacuna")]
+        public string? Vacuna { get; set; }
+        [Column("Computacion_info")]
+        public string? Computacion_info { get; set; }
+        [Column("Confeccion_info")]
+        public string? Confeccion_info { get; set; }
+        [Column("Estetica_info")]
+        public string? Estetica_info { get; set; }
+        [Column("Horario")]
+        public string? Horario { get; set; }
+        [Column("Foto_DNI")]
+        public string? Foto_DNI { get; set; }
+        [Column("Codigo_Voucher")]
+        public string? Codigo_Voucher { get; set; }
+        [Column("Foto_Voucher")]
+        public string? Foto_Voucher { get; set; }
+        [Column("Apuntes")]
+        public string? Apuntes { get; set; }
     }
 }
