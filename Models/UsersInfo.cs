@@ -46,5 +46,7 @@ namespace appproy.Models
         public string? Direccion { get; set; }
         [Column("Distrito")]
         public string? Distrito { get; set; }
+        [Column("DNI")]
+        public string? DNI { get; set; }
     }
 }

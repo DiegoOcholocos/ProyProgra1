@@ -8,37 +8,61 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => listItemsDatos.FirstOrDefault().Nacionalidad)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+    <tbody class="d-flex justify-content-center">
 @foreach (UsersInfo item in Model.elementosDatos) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nacionalidad)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Nombre</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Name)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Apellidos</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.LastName)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Pasaporte</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Pasaporte)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Carnet de Extranjeria</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Carnet_de_extranjeria)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Nacionalidad</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Nacionalidad)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Cumpleaños</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.BirthDate)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Celular</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Celular)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Operador</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Operador)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Sexo</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Sexo)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Grado Academico</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Grado_Academico)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Correo GMAIL</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Correo)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Direccion</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Direccion)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Distrito</h4>
+                <p style="font-size: 35px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Distrito)</p>
+            </a>
+        </div>
 }
     </tbody>
-</table>
