@@ -42,6 +42,63 @@ namespace appproy.Controllers
 
         return View(model);
         }
+
+        public async Task<IActionResult> Create([Bind("id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,BirthDate,Edad,Celular,Operador,Sexo,Grado_Academico,Correo-GMAIL,Direccion,Distrito,Vacuna,Computacion_info,Confeccion_info,Estetica_info,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Status,Apuntes,Creacion")] UsersMatricula produto)
+
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+            if (ModelState.IsValid)
+
+            {
+
+                AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+                AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+                _context.Add(produto);
+
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+
+            }
+
+            return View(produto);
+
+        }
+
+        // GET: Produtos/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.DataUsersMatricula
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return View(produto);
+        }
+
+        // POST: Produtos/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var produto = await _context.DataUsersMatricula.FindAsync(id);
+            _context.DataUsersMatricula.Remove(produto);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+            private bool ProdutoExists(int id)
+        {
+            return _context.DataUsersMatricula.Any(e => e.Id == id);
+        }
     }
 }
 
