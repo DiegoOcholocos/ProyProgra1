@@ -1,0 +1,59 @@
+@model dynamic;
+@using System.Collections.Generic;
+
+@{
+    ViewData["Title"] = "Mensajes";
+    IEnumerable<appproy.Models.Contacto> listItemsContacto = new List<Contacto>();
+    listItemsContacto = @Model.elementosDatos;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => listItemsContacto.FirstOrDefault().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsContacto.FirstOrDefault().name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsContacto.FirstOrDefault().email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsContacto.FirstOrDefault().subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsContacto.FirstOrDefault().comment)
+            </th>
+            <th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Contacto item in Model.elementosDatos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comment)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
