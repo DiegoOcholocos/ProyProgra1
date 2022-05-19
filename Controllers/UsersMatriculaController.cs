@@ -51,7 +51,6 @@ namespace appproy.Controllers
             if (ModelState.IsValid)
 
             {
-
                 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
                 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
                 _context.Add(produto);
