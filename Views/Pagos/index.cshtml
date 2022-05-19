@@ -1,0 +1,91 @@
+@model dynamic;
+@using System.Collections.Generic;
+
+@{
+    ViewData["Title"] = "Pagos";
+    IEnumerable<appproy.Models.Pagos> listItemsPagos = new List<Pagos>();
+    listItemsPagos = @Model.elementosDatos;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().NOMBRES_Y_APELLIDOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().DNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Celular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Computacion_info)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Confeccion_info)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Estetica_info)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Turno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Codigo_recibo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsPagos.FirstOrDefault().Foto_recibo)
+            </th>
+            <th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Pagos item in Model.elementosDatos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRES_Y_APELLIDOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DNI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Computacion_info)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confeccion_info)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estetica_info)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Turno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo_recibo)
+            </td>
+            <td>
+                <img class="img-responsive" width="500" height="500"
+                       src="@Html.DisplayFor(modelItem => item.Foto_recibo)" />
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
