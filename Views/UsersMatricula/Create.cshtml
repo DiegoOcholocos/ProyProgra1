@@ -6,7 +6,7 @@
 
 <h1>Create</h1>
 
-<h4>Produto</h4>
+<h4>Nueva matricula</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UserID" class="control-label">UserID</label>
-                <input asp-for="UserID" class="form-control" />
+                <input asp-for="UserID" class="form-control" value="@User.Identity?.Name" readonly/>
                 <span asp-validation-for="UserID" class="text-danger"></span>
             </div>
             <div class="form-group">
