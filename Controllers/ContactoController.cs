@@ -56,5 +56,63 @@ namespace appproy.Controllers
         }
 
 
+        // GET: Produtos/Delete/5
+
+        public async Task<IActionResult> Delete(int? id)
+
+        {
+
+            if (id == null)
+
+            {
+
+                return NotFound();
+
+            }
+
+
+
+            var produto = await _context.DataContactos
+
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (produto == null)
+
+            {
+
+                return NotFound();
+
+            }
+
+
+
+            return View(produto);
+
+        }
+
+
+
+        // POST: Produtos/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> DeleteConfirmed(int id)
+
+        {
+
+            var produto = await _context.DataContactos.FindAsync(id);
+
+            _context.DataContactos.Remove(produto);
+
+            await _context.SaveChangesAsync();
+
+
+
+            return RedirectToAction(nameof(Indexadmin));
+
+        }
+
     }
 }
