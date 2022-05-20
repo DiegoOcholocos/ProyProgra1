@@ -30,6 +30,8 @@ namespace appproy.Models
         [Column("Nacionalidad")]
         public string? Nacionalidad { get; set; }
 
+
+
         
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}" )]
@@ -38,7 +40,7 @@ namespace appproy.Models
 
 
 
-        
+
     	[Column("Edad")]
         public string? Edad { get; set; }
         [Column("Celular")]
