@@ -42,6 +42,7 @@ namespace appproy.Controllers
 
         return View(model);
         }
+        
 
         public async Task<IActionResult> Create([Bind("id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,BirthDate,Edad,Celular,Operador,Sexo,Grado_Academico,Correo-GMAIL,Direccion,Distrito,Vacuna,Computacion_info,Confeccion_info,Estetica_info,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Status,Apuntes,Creacion")] UsersMatricula produto)
 
@@ -54,7 +55,6 @@ namespace appproy.Controllers
                 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
                 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
                 _context.Add(produto);
-
                 await _context.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
