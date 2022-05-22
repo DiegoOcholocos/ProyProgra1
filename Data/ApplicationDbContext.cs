@@ -21,4 +21,10 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<appproy.Models.UsersMatricula> DataUsersMatricula { get; set; }
     public DbSet<appproy.Models.Pagos> DataPagos { get; set; }
 
+    public DbSet<appproy.Models.Pago> DataPago { get; set; }
+
+        public DbSet<appproy.Models.Pedido> DataPedido { get; set; }
+
+         public DbSet<appproy.Models.DetallePedido> DataDetallePedido { get; set; }
+
 }
