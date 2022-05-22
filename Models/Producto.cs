@@ -16,8 +16,6 @@ namespace appproy.Models
         public int Id { get; set; }
         [Column("Name")]
         public string Name { get; set; }
-        [Column("Clase")]
-        public string Clase { get; set; }
         [Column("Descripcion")]
         public string Descripcion { get; set; }
         [Column("Precio")]
