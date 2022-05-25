@@ -1,11 +1,4 @@
 
-body {
-    margin: 0;
-    position: relative;
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-}
 
 .propuesta{
   font-size: 45px;  
