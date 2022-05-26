@@ -1,13 +1,20 @@
 @{
     ViewData["Title"] = "";
 }
+<link rel="stylesheet" href="~/css/MenuAd.css" asp-append-version="true" />
 <h1>@ViewData["Title"]</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Menu Administrador</h1>
-    <br>
-    <a class="btn btn-primary btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menupagos">Menu de gestion de Pagos</a>
-    <br><br><br>
-    <a class="btn btn-primary btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menureclamos">Lista de reclamos</a>
-    <br>
+<div class="text-center" >
+    <div>
+        <img src="https://scontent.flim18-1.fna.fbcdn.net/v/t39.30808-6/274863845_413282130598101_1216616379956471726_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGXYF8_8kQv4EWJrZsluWl3GrLAjpmUb5AassCOmZRvkMq8MAqAUJ3xmiNzNXzw3z6fgRqQ_PKV5HG-yrhKJdWo&_nc_ohc=to9PcFy5RrsAX_FsHlj&tn=Whfxu5OebxmgE2CX&_nc_ht=scontent.flim18-1.fna&oh=00_AT9oSSusDtBydeHlECnhnTiLJRubsTMAmqXGxxBifO7jig&oe=62932361" alt="" width=100% height=100%>
+        <br><br><br>
+    </div>
+    <div class="Menu">
+        <h1 class="display-4"><b>Menu Administrador</b></h1>
+        <br> <br> <br> <br>
+         <a class="btn btn-dark btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menupagos">Menu de gestion de Pagos</a>
+        <br><br><br>
+        <a class="btn btn-dark btn-lg btn-block" asp-controller="MenuAdmin" asp-action="Menureclamos">Lista de reclamos</a>
+        <br>
+    </div>
 </div>
