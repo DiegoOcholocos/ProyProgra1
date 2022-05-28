@@ -51,6 +51,14 @@ namespace appproy.Controllers
 
         // GET: Produtos/Delete/5
 
+
+
+
+
+
+
+
+        
         public async Task<IActionResult> Delete(int? id)
 
         {
@@ -82,6 +90,18 @@ namespace appproy.Controllers
             return View(proform);
 
         }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var proform = await _context.DataProforma.FindAsync(id);
+            _context.DataProforma.Remove(proform);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+
 
 
     }
