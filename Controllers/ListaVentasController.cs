@@ -1,45 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using appproy.Models;
 using appproy.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
-using appproy.Util;
-using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
 namespace appproy.Controllers
 {
-    public class ContactoController: Controller
+    public class ListaVentasController: Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ContactoController(ApplicationDbContext context)
+        public ListaVentasController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Contacto objContacto)
-        {
-            _context.Add(objContacto);
-            _context.SaveChanges();
-            ViewData["Message"] = "Se registro el contacto";
-            return View("Index");
-        }
-
-
-
-        public async Task<IActionResult> Indexadmin(){
-        var items = from o in _context.DataContactos select o;
+        var items = from o in _context.DataPago select o;
         var datos = await items.ToListAsync();
 
         dynamic model = new ExpandoObject();
@@ -47,66 +24,6 @@ namespace appproy.Controllers
 
         return View(model);
         }
-
-
-        // GET: Produtos/Delete/5
-
-        public async Task<IActionResult> Delete(int? id)
-
-        {
-
-            if (id == null)
-
-            {
-
-                return NotFound();
-
-            }
-
-
-
-            var produto = await _context.DataContactos
-
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (produto == null)
-
-            {
-
-                return NotFound();
-
-            }
-
-
-
-            return View(produto);
-
-        }
-
-
-
-        // POST: Produtos/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-
-        [ValidateAntiForgeryToken]
-
-        public async Task<IActionResult> DeleteConfirmed(int id)
-
-        {
-
-            var produto = await _context.DataContactos.FindAsync(id);
-
-            _context.DataContactos.Remove(produto);
-
-            await _context.SaveChangesAsync();
-
-
-
-            return RedirectToAction(nameof(Indexadmin));
-
-        }
-
 
 
 

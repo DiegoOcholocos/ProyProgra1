@@ -17,9 +17,15 @@ namespace appproy.Models
         public string name {get; set;}
         [Column("email")]
         public string email {get; set;}
+        [Column("numero")]
+        public string numero {get; set;}
         [Column("subject")]
         public string subject {get; set;}
         [Column("comment")]
         public string comment {get; set;}
+        [Column("AnotacionAdmin")]
+        public string? AnotacionAdmin {get; set;}
+        [Column("Status")]
+        public String Status { get; set; } ="PENDIENTE";
     }
 }
