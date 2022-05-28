@@ -1,11 +1,12 @@
 @model dynamic;
 @using System.Collections.Generic;
-
+ 
 @{
-    ViewData["Title"] = "Datos";
+    ViewData["Title"] = "DATOS DE USUARIO";
     IEnumerable<appproy.Models.UsersInfo> listItemsDatos = new List<UsersInfo>();
     listItemsDatos = @Model.elementosDatos;
 }
+
 <h1>@ViewData["Title"]</h1>
 
     <tbody class="d-flex justify-content-center">
@@ -52,7 +53,7 @@
                 <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Sexo)</p>
             </a>
             <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">Correo GMAIL</h4>
+                <h4 class="list-group-item-heading">Correo</h4>
                 <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(modelItem => item.Correo)</p>
             </a>
             <a href="#" class="list-group-item">

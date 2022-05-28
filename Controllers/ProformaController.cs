@@ -32,7 +32,6 @@ namespace appproy.Controllers
             _userManager = userManager;
 
         }
-
         public async Task<IActionResult> Index(){
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataProforma select o;
@@ -49,6 +48,8 @@ namespace appproy.Controllers
 
             return View(model);
         }
+
+
 
     }
 }

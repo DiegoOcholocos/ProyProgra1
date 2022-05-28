@@ -21,6 +21,6 @@ namespace appproy.Models
         [Column("Precio")]
         public Decimal Precio { get; set; }
         [Column("Status")]
-        public String Status { get; set; } ="PENDIENTE";
+        public String Status { get; set; } = "PENDIENTE";
     }
 }
