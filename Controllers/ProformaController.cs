@@ -49,6 +49,39 @@ namespace appproy.Controllers
             return View(model);
         }
 
+        // GET: Produtos/Delete/5
+
+        public async Task<IActionResult> Delete(int? id)
+
+        {
+
+            if (id == null)
+
+            {
+
+                return NotFound();
+
+            }
+
+
+
+            var proform = await _context.DataProforma
+
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (proform == null)
+
+            {
+
+                return NotFound();
+
+            }
+
+
+
+            return View(proform);
+
+        }
 
 
     }
