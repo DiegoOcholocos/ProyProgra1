@@ -33,9 +33,8 @@ namespace appproy.Models
 
 
         
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}" )]
-        public DateTime? BirthDate { set; get; }
+        [Column("Mes")]
+        public string? Mes { get; set; }
 
 
 
