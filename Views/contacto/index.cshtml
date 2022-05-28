@@ -9,16 +9,16 @@
     <h1 class="display-4"><b>Contactenos</b></h1>
 
     <form asp-controller="Contacto" asp-action="Create">
-        <label asp-for="name" class="form-label"></label>
+        <label asp-for="name" class="form-label">Nombre</label>
         <input asp-for="name" class="form-control form-control-sm" type="text" placeholder="Escribe un Nombre" aria-label=".form-control-sm" />
         <br>
-        <label asp-for="email" class="control-label"></label>
+        <label asp-for="email" class="control-label">Correo</label>
         <input asp-for="email" class="form-control" placeholder="Escribe tu Correo"/>
         <br>
-        <label asp-for="subject" class="control-label"></label>
+        <label asp-for="subject" class="control-label">Asunto</label>
         <input asp-for="subject" class="form-control" Placeholder="Escribe tu Asunto"/>
         <br>
-        <label asp-for="comment" class="control-label"></label>
+        <label asp-for="comment" class="control-label">Comentario</label>
         <input asp-for="comment" class="form-control" Placeholder="Escribe tu Comentario"/>
         <br>
         <div class="form-group">
