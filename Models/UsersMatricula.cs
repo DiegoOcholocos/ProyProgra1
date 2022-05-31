@@ -74,14 +74,11 @@ namespace appproy.Models
         public string? Codigo_Voucher { get; set; }
         [Column("Foto_Voucher")]
         public string? Foto_Voucher { get; set; }
+        [Column("Mes_Matricula")]
+        public string? Mes_Matricula { get; set; }
         [Column("Status")]
         public string? Status { get; set; } ="PENDIENTE";
         [Column("Apuntes")]
         public string? Apuntes { get; set; }
-
-
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? Creacion { set; get; } = DateTime.Now;
     }
 }
