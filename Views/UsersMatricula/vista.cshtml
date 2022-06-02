@@ -1,6 +1,10 @@
-@model IEnumerable<appproy.Models.UsersMatricula>
+@model dynamic;
+@using System.Collections.Generic;
+
 @{
     ViewData["Title"] = "Matriculas";  
+    IEnumerable<appproy.Models.UsersMatricula> listItemsMatricula = new List<UsersMatricula>();
+    listItemsMatricula = @Model.elementosDatos;
 }
 <h1>@ViewData["Title"]</h1>
   <div class="container">
@@ -9,7 +13,7 @@
       <div class="col">
         <div id="products" class="mb-3">
           <div class="row">
-            @foreach (var item in Model) {
+            @foreach (UsersMatricula item in Model.elementosDatos) {
             <div class="col-sm-4">
               <div class="card mb-3">
                 <div class="card-body">
