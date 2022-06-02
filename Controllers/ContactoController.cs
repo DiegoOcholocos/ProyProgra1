@@ -39,14 +39,28 @@ namespace appproy.Controllers
 
 
         public async Task<IActionResult> Indexadmin(){
-        var items = from o in _context.DataContactos select o;
-        var datos = await items.ToListAsync();
 
-        dynamic model = new ExpandoObject();
-        model.elementosDatos = datos;
-
-        return View(model);
+        return View(await _context.DataContactos.ToListAsync());
         }
+        public async Task<IActionResult> IndexadminResueltos(){
+        var items = from o in _context.DataContactos select o;
+        items = items.Where(s => s.Status.Contains("RESUELTO"));
+        
+        return View(await items.ToListAsync());
+        }
+        public async Task<IActionResult> IndexadminSinResolver(){
+        var items = from o in _context.DataContactos select o;
+        items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
+        
+        return View(await items.ToListAsync());
+        }
+        public async Task<IActionResult> IndexadminPendientes(){
+        var items = from o in _context.DataContactos select o;
+        items = items.Where(s => s.Status.Contains("PENDIENTE"));
+        
+        return View(await items.ToListAsync());
+        }
+
 
 
         // GET: Produtos/Delete/5
