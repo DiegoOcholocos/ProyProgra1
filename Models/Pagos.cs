@@ -29,6 +29,7 @@ namespace appproy.Models
         public string? Confeccion_info { get; set; }
         [Column("Estetica_info")]
         public string? Estetica_info { get; set; }
+        
         [Column("Turno")]
         public string Turno { get; set; }
         [Column("Monto")]
@@ -37,9 +38,14 @@ namespace appproy.Models
         public string Codigo_recibo { get; set; }
         [Column("Foto_recibo")]
         public string Foto_recibo { get; set; }
+        [Column("Status")]
+        public string? Status { get; set; } ="PENDIENTE";
+        [Column("Apuntes")]
+        public string? Apuntes { get; set; }
+        [Column("Mes_Matricula")]
+        public string? Mes_Matricula { get; set; }
+        [Column("Año")]
+        public string? Año { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? Creacion { set; get; } = DateTime.Now;
     }
 }

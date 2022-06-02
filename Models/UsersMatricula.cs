@@ -33,8 +33,8 @@ namespace appproy.Models
 
 
         
-        [Column("Mes")]
-        public string? Mes { get; set; }
+        [Column("Año")]
+        public string? Año { get; set; }
 
 
 
