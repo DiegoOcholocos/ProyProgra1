@@ -42,6 +42,7 @@ namespace appproy.Controllers
 
         return View(model);
         }
+
         
         public async Task<IActionResult> vistaP(string? searchString)
         { var userID = _userManager.GetUserName(User);
@@ -63,6 +64,11 @@ namespace appproy.Controllers
                 return NotFound();
             }
             return View(objProduct);
+        }
+
+        public async Task<IActionResult> Indexadmin(){
+
+        return View(await _context.DataPagos.ToListAsync());
         }
 
     }
