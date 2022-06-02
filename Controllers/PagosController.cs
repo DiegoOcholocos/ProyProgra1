@@ -44,8 +44,16 @@ namespace appproy.Controllers
         }
         
         public async Task<IActionResult> vistaP(string? searchString)
-        {
-            return View(await _context.DataPagos.ToListAsync());
+        { var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataPagos select o;
+            items = items.
+                Where(w => w.UserID.Equals(userID));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
         }
 
         public async Task<IActionResult> Details(int? id)
