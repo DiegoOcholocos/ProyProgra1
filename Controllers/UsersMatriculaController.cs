@@ -1,19 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using appproy.Models;
 using appproy.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
-using appproy.Util;
 using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
 
 namespace appproy.Controllers
 {
-//ÍNFORMACION
+    //ÍNFORMACION
     public class UsersMatriculaController: Controller
     {
         private readonly ILogger<UsersMatriculaController> _logger;
@@ -33,7 +27,16 @@ namespace appproy.Controllers
 
         public async Task<IActionResult> vista(string? searchString)
         {
-            return View(await _context.DataUsersMatricula.ToListAsync());
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            items = items.
+                Where(w => w.UserID.Equals(userID));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
         }
 
         
@@ -101,15 +104,11 @@ namespace appproy.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-            private bool ProdutoExists(int id)
-        {
-            return _context.DataUsersMatricula.Any(e => e.Id == id);
-        }
 
         
 
 
-
+        // GET: Producto/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,22 +116,22 @@ namespace appproy.Controllers
                 return NotFound();
             }
 
-            var produto = await _context.DataUsersMatricula.FindAsync(id);
-            if (produto == null)
+            var data = await _context.DataUsersMatricula.FindAsync(id);
+            if (data == null)
             {
                 return NotFound();
             }
-            return View(produto);
+            return View(data);
         }
 
         // POST: Produtos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,Mes,Edad,Celular,Operador,Sexo,Grado_Academico,Correo-GMAIL,Direccion,Distrito,Vacuna,Computacion_info,Confeccion_info,Estetica_info,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Status,Apuntes")] UsersMatricula produto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,Mes,Edad,Celular,Operador,Sexo,Grado_Academico,Correo-GMAIL,Direccion,Distrito,Vacuna,Computacion_info,Confeccion_info,Estetica_info,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Status,Apuntes")] UsersMatricula data)
         {
-            if (id != produto.Id)
+            if (id != data.Id)
             {
                 return NotFound();
             }
@@ -141,12 +140,12 @@ namespace appproy.Controllers
             {
                 try
                 {
-                    _context.Update(produto);
+                    _context.Update(data);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoExists(produto.Id))
+                    if (!DataExists((int)data.Id))
                     {
                         return NotFound();
                     }
@@ -157,7 +156,7 @@ namespace appproy.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(produto);
+            return View(data);
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -167,6 +166,11 @@ namespace appproy.Controllers
                 return NotFound();
             }
             return View(objProduct);
+        }
+
+        private bool DataExists(int id)
+        {
+            return _context.DataUsersMatricula.Any(e => e.Id == id);
         }
 
     }
