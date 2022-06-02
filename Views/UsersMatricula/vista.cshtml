@@ -1,0 +1,35 @@
+@model IEnumerable<appproy.Models.UsersMatricula>
+@{
+    ViewData["Title"] = "Matriculas";  
+}
+<h1>@ViewData["Title"]</h1>
+  <div class="container">
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="370" height="350"
+                       src="@item.Foto_Voucher" alt="@item.Foto_Voucher"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  
+                  <p class="card-text" style="font-size: 24px">Mes Pagado @Html.DisplayFor(modelItem => item.Mes)</p>
+                  
+                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                </div>
+              </div>
+            </div>
+            }
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
