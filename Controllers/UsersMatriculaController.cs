@@ -160,6 +160,15 @@ namespace appproy.Controllers
             return View(produto);
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            UsersMatricula objProduct = await _context.DataUsersMatricula.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
+        }
+
     }
 }
 

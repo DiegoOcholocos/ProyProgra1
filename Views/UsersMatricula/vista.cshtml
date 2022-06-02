@@ -19,13 +19,19 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <p class="card-text"><small class="text-muted">Mes: @Html.DisplayFor(modelItem => item.Año), Año: @Html.DisplayFor(modelItem => item.Año)</small></p>
-                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  <p class="card-text"><small class="text-muted">Mes: @Html.DisplayFor(modelItem => item.Mes_Matricula), Año: @Html.DisplayFor(modelItem => item.Año)</small></p>
+                  <h5 class="card-title">Codigo del Voucher: @Html.DisplayFor(modelItem => item.Codigo_Voucher)</h5>
+                  <h4 class="card-title">Curso:</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Confeccion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Computacion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Estetica_info)</h4>
                   
-                  <p class="card-text" style="font-size: 24px">Mes Pagado @Html.DisplayFor(modelItem => item.Año)</p>
+                  <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.Name ) @Html.DisplayFor(modelItem => item.LastName )</p>
+                  <p class="card-text" style="font-size: 24px">Correo: @Html.DisplayFor(modelItem => item.Correo)</p>
+                  <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
+                  <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
                   
-                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                  <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                 </div>
               </div>
             </div>

@@ -1,0 +1,125 @@
+@model appproy.Models.UsersMatricula
+ 
+@{
+    ViewData["Title"] = "DETALLES DE MATRICULA";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+    <tbody class="d-flex justify-content-center">
+
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Usuario</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.UserID)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Nombre:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Name)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Apellido:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.LastName)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">DNI:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.DNI)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Pasaporte:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Pasaporte)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Carnet de Extranjeria:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Carnet_de_extranjeria)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Nacionalidad</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Nacionalidad)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Año:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Año)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Edad:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Edad)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Celular:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Celular)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Operador:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Operador)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Sexo:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Sexo)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Grado Academic:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Grado_Academico)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Correo-GMAIL:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Correo)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Direccion:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Direccion)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Distrito:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Distrito)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Vacuna:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Vacuna)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Computacion:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Computacion_info)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Confeccion:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Confeccion_info)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Estetica:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Estetica_info)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Horario:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Horario)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Foto DNI Cara:</h4>
+                <img class="img-responsive" width="500" height="500" src="@Html.DisplayFor(model => model.Foto_DNI_Cara)" />
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Foto DNI Sello:</h4>
+                <img class="img-responsive" width="500" height="500" src="@Html.DisplayFor(model => model.Foto_DNI_Sello)" />
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Codigo Voucher:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Codigo_Voucher)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Foto Voucher:</h4>
+                <img class="img-responsive" width="500" height="500" src="@Html.DisplayFor(model => model.Foto_Voucher)" />
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Mes Matricula:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Mes_Matricula)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Status:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Status)</p>
+            </a>
+            <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Apuntes:</h4>
+                <p style="font-size: 20px;" class="list-group-item-text">@Html.DisplayFor(model => model.Apuntes)</p>
+            </a>
+        </div>
+    </tbody>
