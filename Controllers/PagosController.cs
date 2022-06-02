@@ -42,6 +42,24 @@ namespace appproy.Controllers
 
         return View(model);
         }
+        
+        public async Task<IActionResult> vistaP(string? searchString)
+        {
+            return View(await _context.DataPagos.ToListAsync());
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            Pagos objProduct = await _context.DataPagos.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
+        }
+
     }
-}
+    }
+
+    
+
 

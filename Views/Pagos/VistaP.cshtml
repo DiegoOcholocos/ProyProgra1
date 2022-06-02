@@ -1,0 +1,44 @@
+@model IEnumerable<appproy.Models.Pagos>
+@{
+    ViewData["Title"] = "Pagos";  
+}
+<h1>@ViewData["Title"]</h1>
+  <div class="container">
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="370" height="350"
+                       src="@item.Foto_recibo" alt="@item.Foto_recibo"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text"><small class="text-muted">Mes: @Html.DisplayFor(modelItem => item.Mes_Matricula), Año: @Html.DisplayFor(modelItem => item.Año)</small></p>
+                  <h5 class="card-title">Codigo del Recibo: @Html.DisplayFor(modelItem => item.Codigo_recibo)</h5>
+                  <h4 class="card-title">Curso:</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Confeccion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Computacion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Estetica_info)</h4>
+                  
+                  <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.NOMBRES_Y_APELLIDOS ) </p>
+                  <p class="card-text" style="font-size: 24px">Dni: @Html.DisplayFor(modelItem => item.DNI )</p>
+                  <p class="card-text" style="font-size: 24px">Correo: @Html.DisplayFor(modelItem => item.Monto)</p>
+                  <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
+                  <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
+                  
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                </div>
+              </div>
+            </div>
+            }
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
