@@ -13,19 +13,19 @@ namespace appproy.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Column("Name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [Column("Descripcion")]
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
         [Column("Precio")]
-        public Decimal Precio { get; set; }
+        public Decimal? Precio { get; set; }
         [Column("PorcentajeDescuento")]
-       public Decimal PorcentajeDescuento { get; set; }
+       public Decimal? PorcentajeDescuento { get; set; }
         [Column("ImageName")]
-        public String ImageName { get; set; }
+        public String? ImageName { get; set; }
         [Column("Status")]
-        public String Status { get; set; }
+        public String? Status { get; set; }
         
     }
 }

@@ -63,7 +63,7 @@ namespace appproy.Controllers
                 var producto = await _context.DataProductos.FindAsync(id);
                 Proforma proforma = new Proforma();
                 proforma.Producto = producto;
-                proforma.Precio = producto.Precio;
+                proforma.Precio = (decimal)producto.Precio;
                 proforma.Cantidad = 1;
                 proforma.UserID = userID;
                 _context.Add(proforma);

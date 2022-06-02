@@ -103,7 +103,7 @@ namespace appcomics.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductoExists(producto.Id))
+                    if (!ProductoExists((int)producto.Id))
                     {
                         return NotFound();
                     }
