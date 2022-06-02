@@ -29,6 +29,13 @@ namespace appproy.Controllers
             _userManager = userManager;
 
         }
+
+
+        public async Task<IActionResult> vista(string? searchString)
+        {
+            return View(await _context.DataUsersMatricula.ToListAsync());
+        }
+
         
         public async Task<IActionResult> Index(){
         var userID = _userManager.GetUserName(User);
