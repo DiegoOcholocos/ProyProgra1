@@ -44,7 +44,7 @@ namespace appproy.Controllers
 
         
 
-        public async Task<IActionResult> Details(int? id, ApplicationDbContext _context)
+        public async Task<IActionResult> Details(int? id)
         {
             Producto objProduct = await _context.DataProductos.FindAsync(id);
             if(objProduct == null){
