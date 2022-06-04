@@ -70,6 +70,24 @@ namespace appproy.Controllers
 
         return View(await _context.DataPagos.ToListAsync());
         }
+        public async Task<IActionResult> IndexadminPagados(){
+        var items = from o in _context.DataPagos select o;
+        items = items.Where(s => s.Status.Contains("PAGADO"));
+        
+        return View(await items.ToListAsync());
+        }
+        public async Task<IActionResult> IndexadminSinResolver(){
+        var items = from o in _context.DataPagos select o;
+        items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
+        
+        return View(await items.ToListAsync());
+        }
+        public async Task<IActionResult> IndexadminPendientes(){
+        var items = from o in _context.DataPagos select o;
+        items = items.Where(s => s.Status.Contains("PENDIENTE"));
+        
+        return View(await items.ToListAsync());
+        }
 
     }
     }
