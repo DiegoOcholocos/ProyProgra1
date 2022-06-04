@@ -1,0 +1,19 @@
+:root{
+    --bootstrap-blue: #1367eb;
+    --white-standar: #f7f6f6;
+    --background-grey: #ccc;
+}
+
+body{
+    background: var(--background-grey);
+}
+
+table thead{
+    background-color: var(--bootstrap-blue);
+    color: var(--white-standar);
+}
+
+.modal-header{
+    background-color: var(--bootstrap-blue);
+    color: var(--white-standar);
+}
