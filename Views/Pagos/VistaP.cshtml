@@ -26,9 +26,7 @@
                   <p class="card-text"><small class="text-muted">Mes: @Html.DisplayFor(modelItem => item.Mes_Matricula), Año: @Html.DisplayFor(modelItem => item.Año)</small></p>
                   <h5 class="card-title">Codigo del Recibo: @Html.DisplayFor(modelItem => item.Codigo_recibo)</h5>
                   <h4 class="card-title">Curso:</h4>
-                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Confeccion_info)</h4>
-                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Computacion_info)</h4>
-                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Estetica_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Curso)</h4>
                   
                   <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.Name ) @Html.DisplayFor(modelItem => item.LastName )</p>
                   <p class="card-text" style="font-size: 24px">Dni: @Html.DisplayFor(modelItem => item.DNI )</p>
@@ -37,7 +35,6 @@
                   <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
                   
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
-                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </div>
               </div>

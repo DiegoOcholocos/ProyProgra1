@@ -115,7 +115,7 @@ namespace appproy.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Create([Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos produto)
+        public async Task<IActionResult> Create([Bind("Id,UserID,Name,LastName,DNI,Celular,Area,Curso,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos produto)
 
         {
         
@@ -199,7 +199,7 @@ namespace appproy.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Area,Curso,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
         {
             if (id != data.Id)
             {
@@ -257,7 +257,7 @@ namespace appproy.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost, ActionName("EditSimple")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditSimple(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
+        public async Task<IActionResult> EditSimple(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Area,Curso,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
         {
             if (id != data.Id)
             {

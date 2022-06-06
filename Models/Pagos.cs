@@ -25,12 +25,10 @@ namespace appproy.Models
         public string DNI { get; set; }
         [Column("Celular")]
         public string Celular { get; set; }
-        [Column("Computacion_info")]
-        public string? Computacion_info { get; set; }
-        [Column("Confeccion_info")]
-        public string? Confeccion_info { get; set; }
-        [Column("Estetica_info")]
-        public string? Estetica_info { get; set; }
+        [Column("Area")]
+        public string? Area { get; set; }
+        [Column("Curso")]
+        public string? Curso { get; set; }
         
         [Column("Turno")]
         public string Turno { get; set; }
