@@ -26,8 +26,7 @@ namespace appproy.Controllers
 
 
         public async Task<IActionResult> vista(string? searchString)
-        {
-            var userID = _userManager.GetUserName(User);
+        { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataUsersMatricula select o;
             items = items.
                 Where(w => w.UserID.Equals(userID));
@@ -38,6 +37,7 @@ namespace appproy.Controllers
 
             return View(model);
         }
+           
 
         public async Task<IActionResult> vistaCentral(string? searchString)
         {
