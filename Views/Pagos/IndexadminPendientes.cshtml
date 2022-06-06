@@ -30,7 +30,7 @@
                   <h4 class="card-title">@Html.DisplayFor(modelItem => item.Computacion_info)</h4>
                   <h4 class="card-title">@Html.DisplayFor(modelItem => item.Estetica_info)</h4>
                   
-                  <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.NOMBRES_Y_APELLIDOS ) </p>
+                  <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.Name ) @Html.DisplayFor(modelItem => item.LastName )</p>
                   <p class="card-text" style="font-size: 24px">Dni: @Html.DisplayFor(modelItem => item.DNI )</p>
                   <p class="card-text" style="font-size: 24px">Correo: @Html.DisplayFor(modelItem => item.Monto)</p>
                   <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
@@ -39,6 +39,7 @@
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="EditSimple" asp-route-id="@item.Id">Edit STATUS</a>
                 </div>
               </div>
             </div>

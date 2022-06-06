@@ -115,7 +115,7 @@ namespace appproy.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Create([Bind("Id,UserID,NOMBRES_Y_APELLIDOS,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos produto)
+        public async Task<IActionResult> Create([Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos produto)
 
         {
         
@@ -199,7 +199,7 @@ namespace appproy.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,NOMBRES_Y_APELLIDOS,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
         {
             if (id != data.Id)
             {
@@ -236,6 +236,63 @@ namespace appproy.Controllers
             return View(data);
         }
 
+        // GET: Producto/Edit/5
+        public async Task<IActionResult> EditSimple(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var data = await _context.DataPagos.FindAsync(id);
+            if (data == null)
+            {
+                return NotFound();
+            }
+            return View(data);
+        }
+
+        // POST: Produtos/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost, ActionName("EditSimple")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditSimple(int id, [Bind("Id,UserID,Name,LastName,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
+        {
+            if (id != data.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(data);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!DataExists((int)data.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                return RedirectToAction(nameof(Indexadmin));
+                }else{
+                return RedirectToAction(nameof(vistaP));    
+                }
+            }
+            return View(data);
+        }
         private bool DataExists(int id)
         {
             return _context.DataPagos.Any(e => e.Id == id);

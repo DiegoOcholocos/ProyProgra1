@@ -1,0 +1,93 @@
+@model appproy.Models.UsersMatricula
+
+@{
+    ViewData["Title"] = "EditSimple";
+}
+
+<h1>Edit</h1>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="UserID" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nombre</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="LastName" class="control-label">Apellido</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="DNI" />
+            <input type="hidden" asp-for="Pasaporte" />
+            <input type="hidden" asp-for="Carnet_de_extranjeria" />
+            <input type="hidden" asp-for="Nacionalidad" />
+            <input type="hidden" asp-for="Edad" />
+            <input type="hidden" asp-for="Celular" />
+            <input type="hidden" asp-for="Operador" />
+            <input type="hidden" asp-for="Sexo" />
+            <input type="hidden" asp-for="Grado_Academico" />
+            <input type="hidden" asp-for="Correo" />
+            <input type="hidden" asp-for="Direccion" />
+            <input type="hidden" asp-for="Distrito" />
+            <input type="hidden" asp-for="Computacion_info" />
+            <input type="hidden" asp-for="Confeccion_info" />
+            <input type="hidden" asp-for="Estetica_info" />
+            <input type="hidden" asp-for="Horario" />
+            <input type="hidden" asp-for="Foto_DNI_Cara" />
+            <input type="hidden" asp-for="Foto_DNI_Sello" />
+            
+            <input type="hidden" asp-for="Vacuna" />
+
+            <div class="form-group">
+                <label asp-for="Codigo_Voucher" class="control-label"></label>
+                <input asp-for="Codigo_Voucher" class="form-control" />
+                <span asp-validation-for="Codigo_Voucher" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Foto_Voucher" />
+            
+            
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apuntes" class="control-label"></label>
+                <input asp-for="Apuntes" class="form-control" />
+                <span asp-validation-for="Apuntes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mes_Matricula" class="control-label"></label>
+                <input asp-for="Mes_Matricula" class="form-control" />
+                <span asp-validation-for="Mes_Matricula" class="text-danger"></span>
+            </div>  
+            <div class="form-group">
+                <label asp-for="Año" class="control-label"></label>
+                <input asp-for="Año" class="form-control" />
+                <span asp-validation-for="Año" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

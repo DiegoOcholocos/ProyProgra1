@@ -25,51 +25,21 @@
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="DNI" class="control-label">DNI</label>
-                <input asp-for="DNI" class="form-control" />
-                <span asp-validation-for="DNI" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Celular" class="control-label"></label>
-                <input asp-for="Celular" class="form-control" />
-                <span asp-validation-for="Celular" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Computacion_info" class="control-label"></label>
-                <input asp-for="Computacion_info" class="form-control" />
-                <span asp-validation-for="Computacion_info" class="text-danger"></span>
-            </div>
-               <div class="form-group">
-                <label asp-for="Confeccion_info" class="control-label"></label>
-                <input asp-for="Confeccion_info" class="form-control" />
-                <span asp-validation-for="Confeccion_info" class="text-danger"></span>
-            </div>
-               <div class="form-group">
-                <label asp-for="Estetica_info" class="control-label"></label>
-                <input asp-for="Estetica_info" class="form-control" />
-                <span asp-validation-for="Estetica_info" class="text-danger"></span>
-            </div>
-               <div class="form-group">
-                <label asp-for="Turno" class="control-label"></label>
-                <input asp-for="Turno" class="form-control" />
-                <span asp-validation-for="Turno" class="text-danger"></span>
-            </div>
-               <div class="form-group">
-                <label asp-for="Monto" class="control-label"></label>
-                <input asp-for="Monto" class="form-control" />
-                <span asp-validation-for="Monto" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="DNI" />
+            <input type="hidden" asp-for="Celular" />
+            <input type="hidden" asp-for="Computacion_info" />
+            <input type="hidden" asp-for="Confeccion_info" />
+            <input type="hidden" asp-for="Estetica_info" />
+            <input type="hidden" asp-for="Turno" />
+            <input type="hidden" asp-for="Monto" />
+
+            
                <div class="form-group">
                 <label asp-for="Codigo_recibo" class="control-label"></label>
                 <input asp-for="Codigo_recibo" class="form-control" />
                 <span asp-validation-for="Codigo_recibo" class="text-danger"></span>
             </div>
-               <div class="form-group">
-                <label asp-for="Foto_recibo" class="control-label"></label>
-                <input asp-for="Foto_recibo" class="form-control" />
-                <span asp-validation-for="Foto_recibo" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Foto_recibo" />
                <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
                 <input asp-for="Status" class="form-control" />

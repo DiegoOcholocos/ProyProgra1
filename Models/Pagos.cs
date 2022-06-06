@@ -17,8 +17,10 @@ namespace appproy.Models
         
         [Column("UserID")]
         public string UserID { get; set; }
-        [Column("NOMBRES Y APELLIDOS")]
-        public string? NOMBRES_Y_APELLIDOS { get; set; }
+        [Column("Name")]
+        public string? Name { get; set; }
+        [Column("LastName")]
+        public string? LastName { get; set; }
         [Column("DNI")]
         public string DNI { get; set; }
         [Column("Celular")]
