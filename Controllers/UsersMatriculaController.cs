@@ -30,7 +30,7 @@ namespace appproy.Controllers
             var items = from o in _context.DataUsersMatricula select o;
             items = items.
                 Where(w => w.UserID.Equals(userID));
-            var datos = await items.ToListAsync();
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
             model.elementosDatos = datos;
@@ -43,7 +43,7 @@ namespace appproy.Controllers
         {
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataUsersMatricula select o;
-            var datos = await items.ToListAsync();
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
             model.elementosDatos = datos;
@@ -56,7 +56,7 @@ namespace appproy.Controllers
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataUsersMatricula select o;
             items = items.Where(s => s.Status.Contains("PAGADO"));
-            var datos = await items.ToListAsync();
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
             model.elementosDatos = datos;
@@ -69,7 +69,7 @@ namespace appproy.Controllers
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataUsersMatricula select o;
             items = items.Where(s => s.Status.Contains("PENDIENTE"));
-            var datos = await items.ToListAsync();
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
             model.elementosDatos = datos;
@@ -82,7 +82,7 @@ namespace appproy.Controllers
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataUsersMatricula select o;
             items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
-            var datos = await items.ToListAsync();
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
             model.elementosDatos = datos;
@@ -97,7 +97,7 @@ namespace appproy.Controllers
         var items = from o in _context.DataUsersMatricula select o;
         items = items.
                 Where(w => w.UserID.Equals(userID));
-        var datos = await items.ToListAsync();
+        var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
         dynamic model = new ExpandoObject();
         model.elementosDatos = datos;

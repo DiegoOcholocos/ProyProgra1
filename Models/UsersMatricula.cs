@@ -34,7 +34,7 @@ namespace appproy.Models
 
         
         [Column("Año")]
-        public string? Año { get; set; }
+        public string? Año { get; set; } ="2022";
 
 
 

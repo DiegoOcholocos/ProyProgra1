@@ -39,26 +39,25 @@ namespace appproy.Controllers
 
 
         public async Task<IActionResult> Indexadmin(){
-
-        return View(await _context.DataContactos.ToListAsync());
+        var items = from o in _context.DataContactos select o;
+        return View(await items.OrderByDescending(w => w.Id).ToListAsync());
         }
         public async Task<IActionResult> IndexadminResueltos(){
         var items = from o in _context.DataContactos select o;
         items = items.Where(s => s.Status.Contains("RESUELTO"));
-        
-        return View(await items.ToListAsync());
+        return View(await items.OrderByDescending(w => w.Id).ToListAsync());
         }
         public async Task<IActionResult> IndexadminSinResolver(){
         var items = from o in _context.DataContactos select o;
         items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
         
-        return View(await items.ToListAsync());
+        return View(await items.OrderByDescending(w => w.Id).ToListAsync());
         }
         public async Task<IActionResult> IndexadminPendientes(){
         var items = from o in _context.DataContactos select o;
         items = items.Where(s => s.Status.Contains("PENDIENTE"));
         
-        return View(await items.ToListAsync());
+        return View(await items.OrderByDescending(w => w.Id).ToListAsync());
         }
 
 

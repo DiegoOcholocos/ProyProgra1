@@ -28,7 +28,7 @@
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DNI" class="control-label">DNI</label>
+                <label asp-for="DNI" class="control-label">Documento de Identidad</label>
                 <input asp-for="DNI" class="form-control" />
                 <span asp-validation-for="DNI" class="text-danger"></span>
             </div>
@@ -37,20 +37,51 @@
                 <input asp-for="Celular" class="form-control" />
                 <span asp-validation-for="Celular" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Curso" class="control-label"></label>
-                <input asp-for="Curso" class="form-control" />
-                <span asp-validation-for="Curso" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Area" />
+            <p>--------------------------</p>
                <div class="form-group">
-                <label asp-for="Area" class="control-label"></label>
-                <input asp-for="Area" class="form-control" />
-                <span asp-validation-for="Area" class="text-danger"></span>
+                <label asp-for="Curso" class="control-label"></label>
+                <br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Confeccion Textil">
+                <label asp-for="Curso" for="html">Confeccion Textil</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Manejo de Maquinaria Industrial">
+                <label asp-for="Curso" for="html">Manejo de Maquinaria Industrial</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Diseño Grafico">
+                <label asp-for="Curso" for="html">Diseño Grafico</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Mantenimiento de Equipos">
+                <label asp-for="Curso" for="html">Mantenimiento de Equipos</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Curso de Excel">
+                <label asp-for="Curso" for="html">Curso de Excel</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Digitalizacion y Ofimatica">
+                <label asp-for="Curso" for="html">Digitalizacion y Ofimatica</label><br>
+                <br>
+                <input asp-for="Curso" type="radio" value="Corte de Cabello">
+                <label asp-for="Curso" for="html">Corte de Cabello</label><br>
+                <br>
+            </div>
+            <p>--------------------------</p>
+            <p>--------------------------</p>
                <div class="form-group">
                 <label asp-for="Turno" class="control-label"></label>
-                <input asp-for="Turno" class="form-control" />
-                <span asp-validation-for="Turno" class="text-danger"></span>
+                <br>
+                <br>
+                <input asp-for="Turno" type="radio" value="Mañana">
+                <label asp-for="Turno" for="html">Mañana</label><br>
+                <br>
+                <input asp-for="Turno" type="radio" value="Tarde">
+                <label asp-for="Turno" for="html">Tarde</label><br>
+                <br>
+                <input asp-for="Turno" type="radio" value="Noche">
+                <label asp-for="Turno" for="html">Noche</label><br>
+                <br>
             </div>
+            <p>--------------------------</p>
                <div class="form-group">
                 <label asp-for="Monto" class="control-label"></label>
                 <input asp-for="Monto" class="form-control" />
@@ -66,29 +97,51 @@
                 <input asp-for="Foto_recibo" class="form-control" />
                 <span asp-validation-for="Foto_recibo" class="text-danger"></span>
             </div>
-               <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-               <div class="form-group">
-                <label asp-for="Apuntes" class="control-label"></label>
-                <input asp-for="Apuntes" class="form-control" />
-                <span asp-validation-for="Apuntes" class="text-danger"></span>            
-          
+               <input type="hidden" asp-for="Status" />
+                <input type="hidden" asp-for="Apuntes" />
+            <p>--------------------------</p>
             <div class="form-group">
                 <label asp-for="Mes_Matricula" class="control-label"></label>
-                <input asp-for="Mes_Matricula" class="form-control" />
-                <span asp-validation-for="Mes_Matricula" class="text-danger"></span>
-            
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Enero">
+                <label asp-for="Mes_Matricula" for="html">Enero</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Febrero">
+                <label asp-for="Mes_Matricula" for="html">Febrero</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Marzo">
+                <label asp-for="Mes_Matricula" for="html">Marzo</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Abril">
+                <label asp-for="Mes_Matricula" for="html">Abril</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Mayo">
+                <label asp-for="Mes_Matricula" for="html">Mayo</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Junio">
+                <label asp-for="Mes_Matricula" for="html">Junio</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Julio">
+                <label asp-for="Mes_Matricula" for="html">Julio</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Agosto">
+                <label asp-for="Mes_Matricula" for="html">Agosto</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Septiembre">
+                <label asp-for="Mes_Matricula" for="html">Septiembre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Octubre">
+                <label asp-for="Mes_Matricula" for="html">Octubre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Noviembre">
+                <label asp-for="Mes_Matricula" for="html">Noviembre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Diciembre">
+                <label asp-for="Mes_Matricula" for="html">Diciembre</label><br>
+                <br>
             </div>
-               <div class="form-group">
-                <label asp-for="Año" class="control-label"></label>
-                <input asp-for="Año" class="form-control" />
-                <span asp-validation-for="Año" class="text-danger"></span>
-            
-            </div>
-               
+            <p>--------------------------</p>
+               <input type="hidden" asp-for="Año" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -53,21 +53,69 @@
             <input type="hidden" asp-for="Foto_Voucher" />
             
             
-            <div class="form-group">
+            <p>--------------------------</p>
+               <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
+                <br>
+                <br>
+                <input asp-for="Status" type="radio" value="PAGADO">
+                <label asp-for="Status" for="html">PAGADO</label><br>
+                <br>
+                <input asp-for="Status" type="radio" value="SIN_RESOLVER">
+                <label asp-for="Status" for="html">SIN_RESOLVER</label><br>
+                <br>
+                <input asp-for="Status" type="radio" value="PENDIENTE">
+                <label asp-for="Status" for="html">PENDIENTE</label><br>
+                <br>
             </div>
+            <p>--------------------------</p>
             <div class="form-group">
                 <label asp-for="Apuntes" class="control-label"></label>
                 <input asp-for="Apuntes" class="form-control" />
                 <span asp-validation-for="Apuntes" class="text-danger"></span>
             </div>
+            <p>--------------------------</p>
             <div class="form-group">
                 <label asp-for="Mes_Matricula" class="control-label"></label>
-                <input asp-for="Mes_Matricula" class="form-control" />
-                <span asp-validation-for="Mes_Matricula" class="text-danger"></span>
-            </div>  
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Enero">
+                <label asp-for="Mes_Matricula" for="html">Enero</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Febrero">
+                <label asp-for="Mes_Matricula" for="html">Febrero</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Marzo">
+                <label asp-for="Mes_Matricula" for="html">Marzo</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Abril">
+                <label asp-for="Mes_Matricula" for="html">Abril</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Mayo">
+                <label asp-for="Mes_Matricula" for="html">Mayo</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Junio">
+                <label asp-for="Mes_Matricula" for="html">Junio</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Julio">
+                <label asp-for="Mes_Matricula" for="html">Julio</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Agosto">
+                <label asp-for="Mes_Matricula" for="html">Agosto</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Septiembre">
+                <label asp-for="Mes_Matricula" for="html">Septiembre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Octubre">
+                <label asp-for="Mes_Matricula" for="html">Octubre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Noviembre">
+                <label asp-for="Mes_Matricula" for="html">Noviembre</label><br>
+                <br>
+                <input asp-for="Mes_Matricula" type="radio" value="Diciembre">
+                <label asp-for="Mes_Matricula" for="html">Diciembre</label><br>
+                <br>
+            </div>
+            <p>--------------------------</p>  
             <div class="form-group">
                 <label asp-for="Año" class="control-label"></label>
                 <input asp-for="Año" class="form-control" />

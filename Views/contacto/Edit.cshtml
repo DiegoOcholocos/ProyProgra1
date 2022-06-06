@@ -19,12 +19,22 @@
             <input type="hidden" asp-for="numero" />
             <input type="hidden" asp-for="subject" />
             <input type="hidden" asp-for="comment" />
-            <div class="form-group">
+            <p>--------------------------</p>
+               <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
-                <input  asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-                </select>
+                <br>
+                <br>
+                <input asp-for="Status" type="radio" value="PAGADO">
+                <label asp-for="Status" for="html">PAGADO</label><br>
+                <br>
+                <input asp-for="Status" type="radio" value="SIN_RESOLVER">
+                <label asp-for="Status" for="html">SIN_RESOLVER</label><br>
+                <br>
+                <input asp-for="Status" type="radio" value="PENDIENTE">
+                <label asp-for="Status" for="html">PENDIENTE</label><br>
+                <br>
             </div>
+            <p>--------------------------</p>
            
              <div class="form-group">
                 <label asp-for="AnotacionAdmin" class="control-label"></label>
