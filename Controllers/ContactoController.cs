@@ -145,7 +145,7 @@ namespace appproy.Controllers
     
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,email,numero,subject,AnotacionAdmin,Status")] Contacto contacto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,name,email,numero,subject,comment,AnotacionAdmin,Status")] Contacto contacto)
         {
             if (id != contacto.Id)
             {
@@ -170,7 +170,7 @@ namespace appproy.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Indexadmin));
             }
             return View(contacto);
         }

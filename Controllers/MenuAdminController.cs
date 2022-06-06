@@ -26,5 +26,9 @@ namespace appproy.Controllers
     {
         return View();
     }
+    public IActionResult Menumatriculas()
+    {
+        return View();
+    }
     }
 }

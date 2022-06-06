@@ -1,0 +1,129 @@
+@model appproy.Models.Pagos
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Pagos Pagos Mensuales</h4>
+    <hr />
+    
+   <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.NOMBRES_Y_APELLIDOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Celular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Computacion_info)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Confeccion_info)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Estetica_info)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Turno)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Codigo_recibo)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Foto_recibo)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Mes_Matricula)
+            </th>
+
+             <th>
+                @Html.DisplayNameFor(model => model.Año)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+     <tr>
+            <td>
+               @Html.DisplayFor(model => model.UserID)
+           
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.NOMBRES_Y_APELLIDOS)
+      
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.DNI)
+            
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Celular)
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Computacion_info)
+   
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Confeccion_info)
+     
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Estetica_info)
+          
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Turno)
+        
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Monto)
+       
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Codigo_recibo)
+           
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Foto_recibo)
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Mes_Matricula)
+         
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.Año)
+      
+            </td>
+            
+
+
+  
+            
+            
+        </tr>
+
+    </tbody>
+</table>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -10,6 +10,7 @@
     listItemsMatricula = @Model.elementosDatos;
 }
 <h1>@ViewData["Title"]</h1>
+<a class="btn btn-info" asp-controller="MenuAdmin" asp-action="Menumatriculas">Volver al Menu</a>
 <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Create">Crear</a>
   <div class="container">
     <h1>@ViewData["Message"]</h1>
@@ -40,6 +41,7 @@
                   <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
                   <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
                   <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                  <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                   <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 
                 </div>

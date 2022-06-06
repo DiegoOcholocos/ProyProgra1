@@ -2,12 +2,11 @@
 @model dynamic;
 @using System.Collections.Generic;
 
-   IEnumerable<appproy.Models.Pagos> modelslistItemsMatricula = new List<Pagos>();
-    listItemsMatricula = @Model.elementosDatos;
 @{
     ViewData["Title"] = "Pagos";  
 }
 <h1>@ViewData["Title"]</h1>
+<a class="btn btn-info" asp-controller="Pagos" asp-action="Create">Crear</a>
   <div class="container">
     <h1>@ViewData["Message"]</h1>
     <div class="row">
@@ -38,6 +37,8 @@
                   <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
                   
                   <a class="btn btn-info" asp-controller="Pagos" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </div>
               </div>
             </div>

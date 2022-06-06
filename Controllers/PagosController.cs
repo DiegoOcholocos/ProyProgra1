@@ -66,31 +66,182 @@ namespace appproy.Controllers
             return View(objProduct);
         }
 
-        public async Task<IActionResult> Indexadmin(){
+        public async Task<IActionResult> Indexadmin()
+        { var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataPagos select o;
+            var datos = await items.ToListAsync();
 
-        return View(await _context.DataPagos.ToListAsync());
-        }
-        public async Task<IActionResult> IndexadminPagados(){
-        var items = from o in _context.DataPagos select o;
-        items = items.Where(s => s.Status.Contains("PAGADO"));
-        
-        return View(await items.ToListAsync());
-        }
-        public async Task<IActionResult> IndexadminSinResolver(){
-        var items = from o in _context.DataPagos select o;
-        items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
-        
-        return View(await items.ToListAsync());
-        }
-        public async Task<IActionResult> IndexadminPendientes(){
-        var items = from o in _context.DataPagos select o;
-        items = items.Where(s => s.Status.Contains("PENDIENTE"));
-        
-        return View(await items.ToListAsync());
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
         }
 
+
+        public async Task<IActionResult> IndexadminPagados()
+        { var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataPagos select o;
+            items = items.
+                Where(w => w.Status.Equals("PAGADO"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+        public async Task<IActionResult> IndexadminSinResolver()
+        { var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataPagos select o;
+            items = items.
+                Where(w => w.Status.Equals("SIN_RESOLVER"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+        public async Task<IActionResult> IndexadminPendientes()
+        { var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataPagos select o;
+            items = items.
+                Where(w => w.Status.Equals("PENDIENTE"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> Create([Bind("Id,UserID,NOMBRES_Y_APELLIDOS,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos produto)
+
+        {
+        
+            if (ModelState.IsValid)
+
+            {
+                _context.Add(produto);
+                await _context.SaveChangesAsync();
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                    return RedirectToAction(nameof(Indexadmin));
+                }else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                
+                
+
+            }
+
+            return View(produto);
+
     }
+
+    // GET: Produtos/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var produto = await _context.DataPagos
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return View(produto);
+        }
+
+        // POST: Produtos/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var produto = await _context.DataPagos.FindAsync(id);
+            _context.DataPagos.Remove(produto);
+            await _context.SaveChangesAsync();
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                return RedirectToAction(nameof(Indexadmin));
+                }else{
+                return RedirectToAction(nameof(vistaP));    
+                }
+        }
+
+        // GET: Producto/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var data = await _context.DataPagos.FindAsync(id);
+            if (data == null)
+            {
+                return NotFound();
+            }
+            return View(data);
+        }
+
+        // POST: Produtos/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserID,NOMBRES_Y_APELLIDOS,DNI,Celular,Computacion_info,Confeccion_info,Estetica_info,Turno,Monto,Codigo_recibo,Foto_recibo,Status,Apuntes,Mes_Matricula,Año")] Pagos data)
+        {
+            if (id != data.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(data);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!DataExists((int)data.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                return RedirectToAction(nameof(Indexadmin));
+                }else{
+                return RedirectToAction(nameof(vistaP));    
+                }
+            }
+            return View(data);
+        }
+
+        private bool DataExists(int id)
+        {
+            return _context.DataPagos.Any(e => e.Id == id);
+        }
     }
+}
 
     
 

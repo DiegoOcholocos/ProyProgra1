@@ -42,6 +42,15 @@ namespace appproy.Controllers
 
         return View(model);
         }
+
+        // GET: Producto/Edit/5
+    
+        
+
+        private bool DataExists(int id)
+        {
+            return _context.DataUsersInfo.Any(e => e.Id == id);
+        }
     }
 }
 

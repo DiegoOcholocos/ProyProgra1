@@ -39,6 +39,58 @@ namespace appproy.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> vistaCentral(string? searchString)
+        {
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> vistaPagados(string? searchString)
+        {
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            items = items.Where(s => s.Status.Contains("PAGADO"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> vistaPendiente(string? searchString)
+        {
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            items = items.Where(s => s.Status.Contains("PENDIENTE"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> vistasinResolver(string? searchString)
+        {
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            items = items.Where(s => s.Status.Contains("SIN_RESOLVER"));
+            var datos = await items.ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
+
+
         
         public async Task<IActionResult> Index(){
         var userID = _userManager.GetUserName(User);
@@ -57,17 +109,21 @@ namespace appproy.Controllers
         public async Task<IActionResult> Create([Bind("id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,Mes,Edad,Celular,Operador,Sexo,Grado_Academico,Correo-GMAIL,Direccion,Distrito,Vacuna,Computacion_info,Confeccion_info,Estetica_info,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Status,Apuntes")] UsersMatricula produto)
 
         {
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
             if (ModelState.IsValid)
 
             {
-                AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-                AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
                 _context.Add(produto);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                    return RedirectToAction(nameof(vistaCentral));
+                }else
+                {
+                    return RedirectToAction(nameof(vista));
+                }
 
             }
 
@@ -101,7 +157,15 @@ namespace appproy.Controllers
             var produto = await _context.DataUsersMatricula.FindAsync(id);
             _context.DataUsersMatricula.Remove(produto);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                    return RedirectToAction(nameof(vistaCentral));
+                }else
+                {
+                    return RedirectToAction(nameof(vista));
+                }
         }
 
 
@@ -154,7 +218,15 @@ namespace appproy.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                var usuario1 = await _userManager.GetUserAsync(User);
+                var role = await _userManager.GetRolesAsync(usuario1);
+                if (role.Contains("admin"))
+                {
+                    return RedirectToAction(nameof(vistaCentral));
+                }else
+                {
+                    return RedirectToAction(nameof(vista));
+                }
             }
             return View(data);
         }

@@ -40,6 +40,7 @@
                   <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
                   <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
                   <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                  <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                   <a class="btn btn-info" asp-controller="UsersMatricula" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 
                 </div>

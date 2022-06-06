@@ -1,92 +1,50 @@
-@model IEnumerable<appproy.Models.Pagos>
+
+@model dynamic;
+@using System.Collections.Generic;
 
 @{
-    ViewData["Title"] = "Pagos";
+    ViewData["Title"] = "Pagos";  
 }
-
-
 <h1>@ViewData["Title"]</h1>
-
-<a class="nav-link text-dark" asp-area="" asp-controller="Pagos" asp-action="vistaP"><b>Vista2.0</b></a>
-
-<table class="table">
-
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NOMBRES_Y_APELLIDOS)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DNI)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Celular)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Computacion_info)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Confeccion_info)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estetica_info)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Turno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Monto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Codigo_recibo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Foto_recibo)
-            </th>
-            <th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NOMBRES_Y_APELLIDOS)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DNI)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Computacion_info)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Confeccion_info)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estetica_info)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Turno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Monto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Codigo_recibo)
-            </td>
-            <td>
-                <img class="img-responsive" width="500" height="500"
-                       src="@Html.DisplayFor(modelItem => item.Foto_recibo)" />
-            </td>
-
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<a class="btn btn-info" asp-controller="Pagos" asp-action="Create">Crear</a>
+  <div class="container">
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (Pagos item in Model.elementosDatos){
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="370" height="350"
+                       src="@item.Foto_recibo" alt="@item.Foto_recibo"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text"><small class="text-muted">Mes: @Html.DisplayFor(modelItem => item.Mes_Matricula), Año: @Html.DisplayFor(modelItem => item.Año)</small></p>
+                  <h5 class="card-title">Codigo del Recibo: @Html.DisplayFor(modelItem => item.Codigo_recibo)</h5>
+                  <h4 class="card-title">Curso:</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Confeccion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Computacion_info)</h4>
+                  <h4 class="card-title">@Html.DisplayFor(modelItem => item.Estetica_info)</h4>
+                  
+                  <p class="card-text" style="font-size: 24px">Nombre: @Html.DisplayFor(modelItem => item.NOMBRES_Y_APELLIDOS ) </p>
+                  <p class="card-text" style="font-size: 24px">Dni: @Html.DisplayFor(modelItem => item.DNI )</p>
+                  <p class="card-text" style="font-size: 24px">Correo: @Html.DisplayFor(modelItem => item.Monto)</p>
+                  <p class="card-text" style="font-size: 24px">Telefono: @Html.DisplayFor(modelItem => item.Celular)</p>
+                  <h4 class="card-title"> Status: @Html.DisplayFor(modelItem => item.Status)</h4>
+                  
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                  <a class="btn btn-info" asp-controller="Pagos" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+              </div>
+            </div>
+            }
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
