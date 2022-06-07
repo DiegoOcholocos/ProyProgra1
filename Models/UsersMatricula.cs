@@ -78,5 +78,8 @@ namespace appproy.Models
         public string? Status { get; set; } ="PENDIENTE";
         [Column("Apuntes")]
         public string? Apuntes { get; set; }
+
+        [Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime CreationDate { get; set; } = DateTime.Now;
     }
 }
