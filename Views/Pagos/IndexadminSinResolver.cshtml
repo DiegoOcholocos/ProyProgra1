@@ -6,7 +6,32 @@
     ViewData["Title"] = "Pagos";  
 }
 <h1>@ViewData["Title"]</h1>
-<a class="btn btn-info" asp-controller="Pagos" asp-action="Create">Crear</a>
+
+<div class="navbar">
+    <div class="col">
+      <a class="btn btn-info" asp-controller="MenuAdmin" asp-action="Menupagos">Volver al Menu</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-info" asp-controller="Pagos" asp-action="Create">Crear</a>
+    </div>
+    <div class="col-md-1">
+      <p class="d-inline">BUSCADOR:</p>
+    </div>
+    <div class="col-md-6">
+        <form asp-controller="Pagos" asp-action="indexadminSinResolver">
+        <div class="col-3">
+          <input type="text"  class="form-control" placeholder="Curso" aria-label="searchString" name="searchString"/>
+        </div>
+        <div class="col-3">
+          <input type="text"  class="form-control" placeholder="Mes" aria-label="searchString2" name="searchString2"/>
+        </div>
+        <div>
+          <input type="submit" value="Buscar" class="btn btn-primary "/>
+        </div>         
+        </form>
+    </div>
+</div>
+
   <div class="container">
     <h1>@ViewData["Message"]</h1>
     <div class="row">

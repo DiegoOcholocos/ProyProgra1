@@ -44,11 +44,28 @@ namespace appproy.Controllers
         }
 
         
-        public async Task<IActionResult> vistaP(string? searchString)
+        public async Task<IActionResult> vistaP(string? searchString,string? searchString2)
         { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataPagos select o;
             items = items.
                 Where(w => w.UserID.Equals(userID));
+            
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
+
             var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
@@ -66,9 +83,26 @@ namespace appproy.Controllers
             return View(objProduct);
         }
 
-        public async Task<IActionResult> Indexadmin()
+        public async Task<IActionResult> Indexadmin(string? searchString,string? searchString2)
         { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataPagos select o;
+
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
+
             var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
@@ -78,11 +112,28 @@ namespace appproy.Controllers
         }
 
 
-        public async Task<IActionResult> IndexadminPagados()
+        public async Task<IActionResult> IndexadminPagados(string? searchString,string? searchString2)
         { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataPagos select o;
             items = items.
                 Where(w => w.Status.Equals("PAGADO"));
+
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
+
             var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
@@ -90,11 +141,28 @@ namespace appproy.Controllers
 
             return View(model);
         }
-        public async Task<IActionResult> IndexadminSinResolver()
+        public async Task<IActionResult> IndexadminSinResolver(string? searchString,string? searchString2)
         { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataPagos select o;
             items = items.
                 Where(w => w.Status.Equals("SIN_RESOLVER"));
+
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
+
             var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
@@ -102,11 +170,27 @@ namespace appproy.Controllers
 
             return View(model);
         }
-        public async Task<IActionResult> IndexadminPendientes()
+        public async Task<IActionResult> IndexadminPendientes(string? searchString,string? searchString2)
         { var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataPagos select o;
             items = items.
                 Where(w => w.Status.Equals("PENDIENTE"));
+
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
             var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();
