@@ -1,7 +1,7 @@
 @model appproy.Models.UsersMatricula
 
 @{
-    ViewData["Title"] = "EditSimple";
+    ViewData["Title"] = "Edit Simplificado";
 }
 
 <h1>Edit</h1>
@@ -66,6 +66,10 @@
                 <br>
                 <input asp-for="Status" type="radio" value="PENDIENTE">
                 <label asp-for="Status" for="html">PENDIENTE</label><br>
+                <br>
+                <br>
+                <input asp-for="Status" type="radio" value="SUSPENDIDO">
+                <label asp-for="Status" for="html">SUSPENDIDO</label><br>
                 <br>
             </div>
             <p>--------------------------</p>

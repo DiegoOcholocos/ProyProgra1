@@ -149,6 +149,33 @@ namespace appproy.Controllers
 
             return View(model);
         }
+        public async Task<IActionResult> vistaSuspendido(string? searchString,string? searchString2)
+        {
+            var userID = _userManager.GetUserName(User);
+            var items = from o in _context.DataUsersMatricula select o;
+            items = items.Where(s => s.Status.Contains("SUSPENDIDO"));
+            if(!String.IsNullOrEmpty(searchString) & !String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }
+            else if(!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Curso.Contains(searchString));
+            }
+            else if(!String.IsNullOrEmpty(searchString2))
+            {
+                items = items.Where(s => s.Mes_Matricula.Contains(searchString2));
+            }else{
+                
+            }
+            var datos = await items.OrderByDescending(w => w.Id).ToListAsync();
+
+            dynamic model = new ExpandoObject();
+            model.elementosDatos = datos;
+
+            return View(model);
+        }
 
 
         
