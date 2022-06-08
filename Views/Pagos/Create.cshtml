@@ -37,7 +37,6 @@
                 <input asp-for="Celular" class="form-control" />
                 <span asp-validation-for="Celular" class="text-danger"></span>
             </div>
-            <input type="hidden" asp-for="Area" />
             <p>--------------------------</p>
                <div class="form-group">
                 <label asp-for="Curso" class="control-label"></label>
@@ -82,6 +81,11 @@
                 <br>
             </div>
             <p>--------------------------</p>
+            <div class="form-group">
+                <label asp-for="Area" class="control-label"></label>
+                <input asp-for="Area" class="form-control" />
+                <span asp-validation-for="Area" class="text-danger"></span>
+            </div>
                <div class="form-group">
                 <label asp-for="Monto" class="control-label"></label>
                 <input asp-for="Monto" class="form-control" />
@@ -142,6 +146,7 @@
             </div>
             <p>--------------------------</p>
                <input type="hidden" asp-for="Año" />
+               <input type="hidden" asp-for="CreationDate" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -46,6 +46,8 @@ namespace appproy.Models
         public string? Mes_Matricula { get; set; }
         [Column("Año")]
         public string? Año { get; set; } ="2022";
+        [Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime CreationDate { get; set; } = DateTime.Now;
 
     }
 }

@@ -33,7 +33,7 @@ namespace appproy.Controllers
         public async Task<IActionResult> Index(){
             var items = from o in _context.DataPagos select o;
             items = items.Where(w => w.Status.Equals("PAGADO"));
-            items = items.Where(s => s.Curso.Contains("Diseño Grafico"));
+            items = items.Where(s => s.Curso.Contains("Confeccion Textil"));
             var datos1 = await items.OrderByDescending(w => w.Id).ToListAsync();
 
             dynamic model = new ExpandoObject();

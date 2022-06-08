@@ -311,7 +311,7 @@ namespace appproy.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost, ActionName("EditSimple")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditSimple(int id, [Bind("Id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,Año,Edad,Celular,Operador,Sexo,Grado_Academico,Correo,Direccion,Distrito,Vacuna,Area,Curso,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Mes_Matricula,Status,Apuntes")] UsersMatricula data)
+        public async Task<IActionResult> EditSimple(int id, [Bind("Id,UserID,Name,LastName,DNI,Pasaporte,Carnet_de_extranjeria,Nacionalidad,Año,Edad,Celular,Operador,Sexo,Grado_Academico,Correo,Direccion,Distrito,Vacuna,Area,Curso,Horario,Foto_DNI_Cara,Foto_DNI_Sello,Codigo_Voucher,Foto_Voucher,Mes_Matricula,Status,Apuntes,CreationDate")] UsersMatricula data)
         {
             if (id != data.Id)
             {
