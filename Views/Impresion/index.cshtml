@@ -6,56 +6,120 @@
     IEnumerable<appproy.Models.Pagos> listItemsPagos1 = new List<Pagos>();
 
     listItemsPagos1 = @Model.elementosConfeccion;
-
+    Decimal cursos1 = @Model.elementocurso;
 }
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="navbar">
+    <div class="col">
+      <a class="btn btn-info" asp-controller="MenuAdmin" asp-action="index">Volver al Menu</a>
+    </div>
+    <div class="col-md-1">
+      <p class="d-inline">BUSCADOR:</p>
+    </div>
+    <div class="col-md-6">
+        <form asp-controller="Impresion" asp-action="index">
+               <div class="form-group">
+                <label class="control-label">CURSO</label>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Confeccion Textil">
+                <label for="html">Confeccion Textil</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Manejo de Maquinaria Industrial">
+                <label for="html">Manejo de Maquinaria Industrial</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Diseño Grafico">
+                <label for="html">Diseño Grafico</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Mantenimiento de Equipos">
+                <label for="html">Mantenimiento de Equipos</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Curso de Excel">
+                <label for="html">Curso de Excel</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Digitalizacion y Ofimatica">
+                <label for="html">Digitalizacion y Ofimatica</label><br>
+                <br>
+                <input type="radio"  placeholder="Curso" aria-label="searchString" name="searchString" value="Corte de Cabello">
+                <label for="html">Corte de Cabello</label><br>
+            </div>
+            <p>--------------------------</p>
+            <div class="form-group">
+                <label class="control-label">Mes</label>
+                <br>
+                <input type="radio" value="Enero" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Enero</label><br>
+                <br>
+                <input type="radio" value="Febrero" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Febrero</label><br>
+                <br>
+                <input type="radio" value="Marzo" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Marzo</label><br>
+                <br>
+                <input type="radio" value="Abril" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Abril</label><br>
+                <br>
+                <input type="radio" value="Mayo" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Mayo</label><br>
+                <br>
+                <input type="radio" value="Junio" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Junio</label><br>
+                <br>
+                <input type="radio" value="Julio" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Julio</label><br>
+                <br>
+                <input type="radio" value="Agosto" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Agosto</label><br>
+                <br>
+                <input type="radio" value="Septiembre" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Septiembre</label><br>
+                <br>
+                <input type="radio" value="Octubre" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Octubre</label><br>
+                <br>
+                <input type="radio" value="Noviembre" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Noviembre</label><br>
+                <br>
+                <input type="radio" value="Diciembre" placeholder="Mes" aria-label="searchString2" name="searchString2">
+                <label for="html">Diciembre</label><br>
+            </div>
+            <p>--------------------------</p>
+          <input type="submit" value="Buscar" class="btn btn-primary "/>       
+        </form>
+    </div>
+</div>
 
-<br>
-<br>
 <div>
     <div>
+    @if ( @cursos1 == 1)
+        {
         <h1>Confeccion Textil</h1>
+        }
+    else if ( @cursos1 == 2)
+        {
+        <h1>Manejo de Maquinaria Industrial</h1>
+        }
+    else if ( @cursos1 == 3)
+        {
+        <h1>Diseño Grafico</h1>
+        }
+    else if ( @cursos1 == 4)
+        {
+        <h1>Mantenimiento de Equipos</h1>
+        }
+    else if ( @cursos1 == 5)
+        {
+        <h1>Curso de Excel</h1>
+        }
+    else if ( @cursos1 == 6)
+        {
+        <h1>Digitalizacion y Ofimatica</h1>
+        }
+    else if ( @cursos1 == 7)
+        {
+        <h1>Corte de Cabello</h1>
+        }else{
+            <h1></h1>
+        }
+    
     </div>
         @foreach (Pagos item in Model.elementosConfeccion) {
         <div class="container align-middle">
