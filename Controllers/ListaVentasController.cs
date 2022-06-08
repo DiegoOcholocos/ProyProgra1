@@ -2,17 +2,21 @@ using Microsoft.AspNetCore.Mvc;
 using appproy.Models;
 using appproy.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
 namespace appproy.Controllers
 {
     public class ListaVentasController: Controller
+     
     {
         private readonly ApplicationDbContext _context;
 
+        private readonly UserManager<IdentityUser> _userManager; 
         public ListaVentasController(ApplicationDbContext context)
         {
             _context = context;
         }
+
 
         public async Task<IActionResult> Index()
         {
@@ -21,15 +25,21 @@ namespace appproy.Controllers
 
         dynamic model = new ExpandoObject();
         model.elementosDatos = datos;
-
+        
         return View(model);
         }
 
+         public async Task<IActionResult> Details(Pago UserID)
+        {  
+            var items = from e in _context.DataDetallePedido select e;
+        var cont = await items.ToListAsync();
 
-
-
-
-
+        dynamic model = new ExpandoObject();
+        model.elementosDe = cont;
+        
+        return View(model);
+        }
+        
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -83,4 +93,5 @@ namespace appproy.Controllers
             return _context.DataContactos.Any(e => e.Id == id);
         }
     }
+    
 }
