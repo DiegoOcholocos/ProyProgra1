@@ -49,8 +49,7 @@
                 @Html.DisplayFor(modelItem => item.UserID)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Detalles</a> |
-            </td>
+               <a class="btn btn-info" asp-controller="ListaVentas" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
         </tr>
 }
     </tbody>

@@ -1,0 +1,56 @@
+@model dynamic
+@using System.Collections.Generic;
+
+@{
+    ViewData["Title"] = "Detalles de Ventas";
+    IEnumerable<appproy.Models.DetallePedido> listItemsDetalle = new List<DetallePedido>();
+    listItemsDetalle = @Model.elementosDe;
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDetalle.FirstOrDefault().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDetalle.FirstOrDefault().Producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDetalle.FirstOrDefault().Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDetalle.FirstOrDefault().Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => listItemsDetalle.FirstOrDefault().pedido)
+            </th>
+            <th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (DetallePedido item in Model.elementosDe) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pedido.UserID)
+            </td>
+            <td>
+
+        </tr>
+}
+    </tbody>
+</table>
