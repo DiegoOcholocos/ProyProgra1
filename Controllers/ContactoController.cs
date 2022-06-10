@@ -7,6 +7,7 @@ using appproy.Models;
 using appproy.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using appproy.Integration.Sengrid;
 using appproy.Util;
 using Microsoft.AspNetCore.Identity;
 using System.Dynamic;
@@ -15,10 +16,12 @@ namespace appproy.Controllers
     public class ContactoController: Controller
     {
         private readonly ApplicationDbContext _context;
+         private readonly SendMailIntegration _sendgrid;
 
-        public ContactoController(ApplicationDbContext context)
+        public ContactoController(ApplicationDbContext context,  SendMailIntegration sendgrid)
         {
             _context = context;
+            _sendgrid = sendgrid;
         }
 
         public IActionResult Index()
@@ -28,12 +31,17 @@ namespace appproy.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Contacto objContacto)
+        public async Task<IActionResult> Create(Contacto objContacto)
         {
-            _context.Add(objContacto);
-            _context.SaveChanges();
-            ViewData["Message"] = "Se registro el contacto";
-            return View("Index");
+                _context.Add(objContacto);
+                _context.SaveChanges();
+                await _sendgrid.SendMail(objContacto.email,
+                objContacto.name,
+                "Bienvenido al e-comerce",
+                "Revisaremos su consulta en breves momentos y le responderemos",
+                SendMailIntegration.SEND_SENDGRID);
+                ViewData["Message"] = "Se registro el contacto";
+                return View("Index");
         }
 
 
