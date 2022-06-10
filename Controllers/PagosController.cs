@@ -215,7 +215,7 @@ namespace appproy.Controllers
                     return RedirectToAction(nameof(Indexadmin));
                 }else
                 {
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(vistaP));
                 }
                 
                 
