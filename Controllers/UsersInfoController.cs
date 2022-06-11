@@ -51,6 +51,11 @@ namespace appproy.Controllers
         {
             return _context.DataUsersInfo.Any(e => e.Id == id);
         }
+
+        public IActionResult index1234()
+    {
+        return View();
+    }
     }
 }
 
