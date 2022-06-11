@@ -86,7 +86,11 @@
         </form>
     </div>
 </div>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    
 <div>
     <div>
     @if ( @cursos1 == 1)
@@ -121,10 +125,10 @@
         }
     
     </div>
-    <br>
         @foreach (Pagos item in Model.elementosConfeccion) {
         <div class="container align-middle">
-            <table class="table table-bordered" style="border: 3px solid gray;height: 100px">
+            <table class="table table-bordered" style="border: 3px solid gray;height: 430px,margin-left: auto,
+  margin-right: auto;">
                 <tr>
                 <th scope="row" width="5%" style="text-align: center; vertical-align: middle; border: 3px solid gray">@Html.DisplayFor(modelItem => item.Id )</th>
                 <th scope="row" width="47%" style="vertical-align: middle;">
@@ -155,6 +159,7 @@
                     </th>
                 </tr>
             </table>
+            <br>
             <br>
             
         </div>
