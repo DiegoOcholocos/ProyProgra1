@@ -15,9 +15,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
-        <form asp-controller="Proforma" asp-action="Index">
-                <input type="submit" value="Carrito" />
-        </form>
+        <a  class="nav-link text-dark" asp-area=""  asp-controller="Proforma" asp-action="Index"><b>Carrito</b></a>
     </li>
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="Pagos" asp-action="vistaP"><b>Pagos</b></a>

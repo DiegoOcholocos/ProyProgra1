@@ -37,8 +37,8 @@ namespace appproy.Controllers
                 _context.SaveChanges();
                 await _sendgrid.SendMail(objContacto.email,
                 objContacto.name,
-                "Bienvenido al e-comerce",
-                "Revisaremos su consulta en breves momentos y le responderemos",
+                "Bienvenido a CETPRO- LA MOLINA",
+                "Resivimos su consulta y le responderemos lo antes posible. Gracias",
                 SendMailIntegration.SEND_SENDGRID);
                 ViewData["Message"] = "Se registro el contacto";
                 return View("Index");

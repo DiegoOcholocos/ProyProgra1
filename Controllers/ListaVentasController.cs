@@ -29,16 +29,27 @@ namespace appproy.Controllers
         return View(model);
         }
 
-         public async Task<IActionResult> Details(Pago UserID)
-        {  
-            var items = from e in _context.DataDetallePedido select e;
-        var cont = await items.ToListAsync();
+        public async Task<IActionResult> Details(int? id){
 
-        dynamic model = new ExpandoObject();
-        model.elementosDe = cont;
-        
-        return View(model);
-        }
+            Pedido objProduct = await _context.DataPedido.FindAsync(id);
+            DetallePedido objProduct1 = await _context.DataDetallePedido.FindAsync(objProduct.ID);
+
+            var items = from o in _context.DataDetallePedido select o;
+            items = items.Include(p => p.Producto).Include(p => p.pedido).Where(w => w.pedido.ID.Equals(objProduct.ID));
+
+
+            var carrito = await items.ToListAsync();
+            var total= carrito.Sum(c => c.Cantidad + c.Cantidad);
+
+            dynamic model = new ExpandoObject(); 
+            model.montoTotal = total;
+            model.elementosCarrito = carrito;
+
+           // var mtoUsuarios = db.AspNetUsers;
+
+            return View(model);
+
+         }
         
 
         public async Task<IActionResult> Edit(int? id)
